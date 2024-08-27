@@ -1,0 +1,5 @@
+USE BookDB
+DELETE FROM Book
+GO
+
+/*344121138Â½éª*/

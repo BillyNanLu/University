@@ -1,0 +1,5 @@
+SELECT BPRICE
+FROM Book
+WHERE BName='T工业技术'
+
+/*344121138陆楠*/
