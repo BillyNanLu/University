@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // 以下代码中的var num变量声明会进行预解析
+      console.log(num);	// 输出结果：undefined
+      var num = 10;
+      // 以下代码由于不存在var num2，所以会报错
+      console.log(num2);	// 报错，提示num2 is not defined（num2未定义）
+    </script>
+  </body>
+</html>

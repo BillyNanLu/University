@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // 声明一个getSum函数，将代码写在大括号“{}”中
+      function getSum(num1, num2) {
+        var sum = 0;
+        for (var i = num1; i <= num2; i++) {
+          sum += i;
+        }
+        console.log(sum);	// 函数执行结束后，将结果输出
+      }
+      // 调用getSum函数，在调用时需要写上小括号，并在小括号里传入参数
+      getSum(1, 100);	 	 // 输出结果：5050
+      getSum(10, 50);	 	 // 输出结果：1230
+    </script>
+  </body>
+</html>

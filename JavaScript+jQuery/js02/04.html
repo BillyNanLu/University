@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>控制流程</title>
+    <script>
+        // 一.顺序结构  在此之前的代码
+        //二.分支结构
+        // 1.条件语句、单分支语句
+        /* if (条件表达式) {
+            // 代码段
+        } */
+        //网吧案例1
+        // var age = prompt('请输入您的年龄');
+        // if (age >= 18) {
+        //     alert('欢迎光临！');
+        // }
+
+        // 2.双分支语句
+        // if (条件表达式) {
+        //     // 代码段1
+        // } else {
+        //     // 代码段2
+        // }
+
+        //网吧案例2
+        // var age = prompt('请输入您的年龄');
+        // if (age >= 18) {
+        //     alert('欢迎光临！');
+        // } else {
+        //     alert('回家种地！');
+        // }
+
+        // 3.多分支语句
+        // if (条件表达式1) { // 代码段1 } 
+        //     else if (条件表达式2) { // 代码段2 }
+        //         ...
+        //         else if (条件表达式n) { // 代码段n } 
+        //         else { // 代码段n+1  }
+
+        //判断学生成绩等级案例
+        // var score = prompt('请您输入成绩分数：');
+        // if (score >= 90) {
+        //     alert('优秀');
+        // } else if (score >= 80) {
+        //     alert('良好');
+        // } else if (score >= 70) {
+        //     alert('中等');
+        // } else if (score >= 60) {
+        //     alert('及格');
+        // } else {
+        //     alert('芭比Q来');
+        // }
+
+        // switch语句 switch语句也是多分支语句，功能与if…else if语句类似，不同的是它只能针对某个表达式的值作出判断，从而决定执行哪一段代码。
+        /*        switch ( 表达式 ) {
+    case 值1:
+       代码段1;
+       break;
+    case 值2:
+       代码段2;
+       break;
+        ...
+    default:
+       代码段n;
+} */
+        //判断星期几
+        var day = prompt('请输入数字');
+        day = day - 0; //把字符串隐式转换成数字
+        switch (day) {
+            case 1:
+                alert('星期一');
+                break;
+            case 2:
+                alert('星期二');
+                break; //break用于执行该代码段后跳出分支语句
+            case 3:
+                alert('星期三');
+                break;
+            case 4:
+                alert('星期四');
+                break;
+            case 5:
+                alert('星期五');
+                break;
+            case 6:
+                alert('星期六');
+                break;
+            case 7:
+                alert('星期日');
+                break;
+            default:
+                alert('请输入数字1-7！');
+        }
+
+        //运算符优先级案例
+        var num = 10;
+        console.log(5 == num / 2 && ((1 + 1 * num).toString() === '11'));
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

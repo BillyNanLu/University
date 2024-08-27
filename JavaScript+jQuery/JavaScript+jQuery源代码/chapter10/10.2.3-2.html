@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script src="jquery-3.3.1.min.js"></script>
+  </head>
+  <body>
+    <div class="father">
+      <div class="son">子元素</div>
+    </div>
+    <script>
+      console.log($(".son").parent());
+      console.log($(".father").find("div"));
+    </script>
+  </body>
+</html>

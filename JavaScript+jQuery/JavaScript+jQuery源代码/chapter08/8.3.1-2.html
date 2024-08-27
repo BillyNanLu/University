@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      function fn() {
+        console.log('JavaScript');
+      }
+      // 在设置定时器时，保存定时器的唯一标识
+      var timer = setTimeout(fn, 3000);
+      // 如果要取消定时器，将唯一标识传递给clearTimeout()方法
+      clearTimeout(timer);
+    </script>
+  </body>
+</html>

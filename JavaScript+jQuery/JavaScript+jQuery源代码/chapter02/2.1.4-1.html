@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      var str1 = '单引号字符串';
+      var str2 = "双引号字符串";
+
+      // 正确的语法
+      var str1 = 'I am a "programmer"';	// I am a "programmer"
+      var str2 = "I'm a 'programmer'";	// I'm a 'programmer'
+
+      // 常见的错误语法
+      // var str1 = 'I'm a programmer';	  	// 单引号错误用法
+      // var str2 = "I'm a "programmer"";	  // 双引号错误用法
+      // var str3 = 'I am a programmer";		// 单双引号混用
+
+      var str1 = 'I\'m a programmer';		// I'm a programmer
+      var str2 = 'I am a\nprogrammer'		// I am a（换行）programmer
+      var str3 = 'C:\\JavaScript\\';		// C:\JavaScript\
+      var str4 = '\x61bc';			      	// abc
+      var str5 = '\u597d学生';				  // 好学生
+
+      var str1 = 'I\'m a programmer';
+      console.log(str1.length);			// 输出结果：16
+      var str2 = '我是程序员';
+      console.log(str2.length);			// 输出结果：5
+
+      var str = 'I\'m a programmer';
+      console.log(str[0]);			// 输出结果：I
+      console.log(str[1]);			// 输出结果：'
+      console.log(str[15]);			// 输出结果：r
+      console.log(str[16]);			// 输出结果：undefined
+
+      console.log('a' + 'b');			// ab
+      console.log('a' + 18);			// a18
+      console.log('_' + true);		// _true
+      console.log('12' + 14);			// 1214
+      console.log(12 + 14);		  	// 两个数字相加，结果为26（非字符串拼接）
+
+      var age = 18;
+      console.log('小明' + age + '岁');	//小明18岁
+    </script>
+  </body>
+</html>

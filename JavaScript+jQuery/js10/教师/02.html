@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>节点操作</title>
+</head>
+
+<body>
+    <!-- <button>按钮</button>
+    <div></div>
+    <ul>
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+    </ul>
+    <script>
+        //创建节点
+        //document.write() 创建元素，如果页面文档流加载完毕，再调用会导致页面重绘
+
+        // document.write('<p>你好！</p>')
+        var btn = document.querySelector('button');
+        // btn.onclick = function() {
+        //     document.write('<p>你好！</p>');
+        // }
+
+        //element.innerHTML将内容写入某个DOM节点，不会导致页面全部重绘
+
+        // var div = document.querySelector('div');
+        // btn.onclick = function() {
+        //     div.innerHTML = '<p>你好！</p>';
+        // }
+
+        //document.createElement()创建多个元素效率稍微低一点，但是结构更加清晰
+        var ul = document.querySelector('ul');
+        //创建一个节点
+        var li = document.createElement('li');
+        //添加节点
+        //appendChild()方法，将一个节点添加到指定父节点的子节点列表末尾
+        // ul.appendChild(li);
+        //insertBefore(child, 指定元素)方法，将一个节点添加到父节点的指定子节点前面
+        ul.insertBefore(li, ul.children[0]);
+
+
+        //删除节点 removeChild(child)用于删除节点，该方法从DOM中删除一个子节点，返回删除的节点
+        ul.removeChild(ul.children[0]);
+
+
+        
+    
+    </script> -->
+
+
+    <ul>
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+    </ul>
+    <!-- <button>按钮</button> -->
+    <script>
+        //复制节点 node.cloneNode() 克隆节点或者拷贝节点
+        //语法为“需要被复制的节点.cloneChild(true/false) ”。如果参数为空或false，则是浅拷贝，即只复制节点本身，不复制里面的子节点；如果括号参数为true，则是深拷贝，即会复制节点本身及里面所有的子节点。
+        var ul = document.querySelector('ul');
+
+        var li = document.querySelector('li');
+        var newli = li.cloneNode(true);
+        ul.insertBefore(newli, ul.children[0]);
+    </script>
+</body>
+
+</html>

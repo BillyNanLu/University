@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM</title>
+
+    <style>
+        div {
+            width: 200px;
+            height: 24px;
+            border: 1px solid #ccc;
+            margin: 20px auto;
+        }
+
+        input {
+            display: block;
+            width: 170px;
+            height: 20px;
+            border: none;
+            outline: none;
+            float: left;
+        }
+
+        img {
+            display: block;
+            width: 24px;
+            height: 24px;
+            float: left;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- 事件基础 -->
+    <!-- <button>唐伯虎</button> -->
+
+    <!-- 元素操作 -->
+    <!-- <button>点击显示</button>
+    <div>当前日期</div>
+    <p>我是文本
+        <strong>111</strong>
+    </p> -->
+
+    <!-- 操作元素的属性 -->
+    <!-- 案例：根据按钮名称 点击后显示对应的图片 -->
+    <!-- <button id="flower">花</button>
+    <button id="grass">草</button>
+    <br>
+    <img src="" alt="" title=""> -->
+
+    <!-- 案例：点击按钮后，文本框内容改变成按钮禁用 -->
+    <!-- <button>按钮</button>
+    <input type="text" name="" id="" value="输入内容"> -->
+
+    <!-- 案例：通过点击睁开、闭眼图片控制input框里密码的现实和隐藏 -->
+    <!-- <div>
+        <input type="password" name="" id="">
+        <img src="./images/close.png" alt="" srcset="">
+    </div> -->
+
+    <!-- 操作style属性 -->
+    <div>盒子1</div>
+
+    <script>
+        /* let btn = document.querySelector('button')  // 获取事件源
+        btn.onclick = function() {  // 绑定事件类型 onclick
+            alert('秋香姐')  // 编写事件处理程序
+        } */
+
+        /* let btn = document.querySelector('button')
+        let box = document.querySelector('div')
+        btn.onclick = function() {
+            // box.innerText = '2023年04月06日'
+            // box.innerHTML = '<strong>2023年04月06日</strong>'
+            // box.textContent = '<strong>2023年04月06日</strong>'
+        } */
+
+        // innerText、innerHTML、textContent 的区别
+        /* let p =document.querySelector('p')
+        console.log(p.innerText)
+        console.log(p.innerHTML)
+        console.log(p.textContent) */
+
+        // 案例：根据按钮名称 点击后显示对应的图片
+        /* let btnf = document.getElementById('flower')
+        let btng = document.getElementById('grass')
+        let img = document.querySelector('img')
+        btnf.onclick = function() {
+            img.src = './images/flower.png'
+            img.title = '花'
+        }
+        btng.onclick = function() {
+            img.src = './images/grass.png'
+            img.title = '草'
+        } */
+
+        // 案例：点击按钮后，文本框内容改变成按钮禁用
+        /* let btn = document.querySelector('button')
+        let txt = document.querySelector('input')
+        btn.onclick = function() {
+            txt.value = '被点击了'  // 此处不能用innerText
+            this.disabled = true  // this 指向btn的本身
+        } */
+
+        // 案例：通过点击睁开、闭眼图片控制input框里密码的现实和隐藏
+        /* let input = document.querySelector('input')
+        let img = document.querySelector('img')
+        let flag = false
+        img.onclick = function() {
+            if (!flag) {
+                img.src = './images/open.png'
+                input.type = 'text'
+                flag = true
+            } else {
+                img.src = './images/close.png'
+                input.type = 'password'
+                flag = false
+            }
+        } */
+
+        let box = document.querySelector('div')
+        box.style.height = '100px'
+        
+    </script>
+</body>
+
+</html>

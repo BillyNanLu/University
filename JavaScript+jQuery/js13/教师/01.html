@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript网页特效</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        
+        .father {
+            /* 要返回son盒子相对于father盒子的偏移量，father盒子必须设置定位 */
+            /* position: relative; */
+            width: 200px;
+            height: 200px;
+            background-color: red;
+            margin: 20px;
+            padding: 50px;
+            border: 30px solid black;
+        }
+        
+        .son {
+            width: 100px;
+            height: 100px;
+            background-color: yellow;
+        }
+        
+        .box {
+            width: 100px;
+            height: 100px;
+            background-color: purple;
+            margin: 20px;
+            padding: 30px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="father">
+        <div class="son"></div>
+    </div>
+    <div class="box" style="width: 300px;"></div>
+    <script>
+        //offset系列：offset的含义是偏移量，使用offset的相关属性可以动态地获取该元素的位置、大小等。
+        var father = document.querySelector('.father');
+        var son = document.querySelector('.son');
+        //offsetLeft 返回元素相对其带有定位的父元素左边框的偏移
+        console.log(father.offsetLeft);
+        //offsetTop 返回元素相对其带有定位的元素上方的偏移父
+        console.log(father.offsetTop);
+        //offsetWidth 返回自身的宽度（包括padding、边框和内容区域的宽度）。注意返回数值不带单位
+        console.log(father.offsetWidth);
+        //offsetHeight 返回自身的高度（包括padding、边框和内容区域的高度）。注意返回数值不带单位
+        console.log(father.offsetHeight);
+        console.log(son.offsetLeft);
+        console.log(son.offsetTop);
+        //offsetParent 返回作为该元素带有定位元素的父级元素（如果父级都没有定位则返回body）
+        console.log(son.offsetParent);
+        //parentNode 返回最近一级的父亲 不管该父亲有没有定位
+        console.log(son.parentNode);
+
+
+
+        //  offset与style的区别
+        var box = document.querySelector('.box');
+        //offset可以得到任意样式表中的样式值 style只能得到行内样式表中的样式值
+        //返回自身的宽度（包括padding、边框和内容区域的宽度） style只能得到本身width（不包含padding、border的值）
+        //offset系列获得的数值是没有单位的 style.width获得的是带有单位的字符串
+        //offsetWidth等属性是只读属性，只能获取不能赋值 ;style.width是可读写属性，可以获取也可以赋值
+        console.log(box.offsetWidth);
+        console.log(box.style.width);
+        box.offsetWidth = 500; //赋值无效
+        box.style.width = '500px';
+    </script>
+</body>
+
+</html>

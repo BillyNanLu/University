@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      var reg = /^a*$/;       // * 相当于>=0，可以出现0次或很多次
+      var reg = /^a+$/;       // + 相当于>=1，可以出现1次或很多次
+      var reg = /^a?$/;       // ? 相当于1||0，可以出现0次或1次
+      var reg = /^a{3}$/;     // {3}就是重复a字符3次
+      var reg = /^a{3,}$/;    // {3,}就是重复a字符 大于等于3次
+      var reg = /^a{3,16}$/;  // {3,16}就是重复a字符 大于等于3次 小于等于16次
+
+      var reg = /^[a-zA-Z0-9_-]$/;
+
+      var reg = /^[a-zA-Z0-9_-]{6,16}$/;
+    </script>
+  </body>
+</html>

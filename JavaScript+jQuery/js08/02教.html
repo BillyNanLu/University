@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM</title>
+    <style>
+        .box {
+            width: 100px;
+            height: 100px;
+            background: red;
+        }
+        
+        .box1 {
+            background: yellow;
+        }
+    </style>
+    <!-- <style>
+        div {
+            width: 200px;
+            height: 24px;
+            border: 1px solid #CCC;
+            margin: 20px auto;
+        }
+        
+        input {
+            display: block;
+            width: 170px;
+            height: 20px;
+            border: none;
+            outline: none;
+            float: left;
+        }
+        
+        img {
+            display: block;
+            width: 24px;
+            height: 24px;
+            float: left;
+        }
+    </style> -->
+</head>
+
+<body>
+    <!-- 1.实践基础 -->
+    <!--事件源-->
+    <!-- <button>唐伯虎</button>
+
+    <script>
+        var btn = document.querySelector('button'); //获取事件源
+        btn.onclick = function() { //绑定事件类型onclick
+            alert('秋香姐！'); //编写事件处理程序
+        }
+    </script> -->
+
+    <!-- 事件三要素是指事件源、事件类型和事件处理程序这3部分。名词解释如下：
+事件源：触发事件的元素（谁触发了事件）
+事件类型：如 click 单击事件（触发了什么事件）
+事件处理程序：事件触发后要执行的代码（函数形式），也称事件处理函数（触发事件以后要做什么） -->
+
+    <!-- 2.元素的操作 -->
+    <!-- 操作元素的内容 -->
+    <!-- <button>点击显示</button>
+    <div>当前日期</div>
+    <p>我是文本
+        <strong>111</strong>
+    </p>
+    <script>
+        var btn = document.querySelector('button');
+        var box = document.querySelector('div');
+        btn.onclick = function() {
+            // box.innerText = '<strong>2023 4 6</strong>';
+            // box.innerHTML = '<strong>2023 4 6</strong>';
+            // box.textContent = '<strong>2023 4 6</strong>'
+        }
+
+        // innerText、innerHtml、textContent的区别
+        var p = document.querySelector('p');
+        console.log(p.innerText); //innerText去掉所有格式以及标签的纯文本内容
+        console.log(p.innerHTML); //innerHTML在使用时会保持编写的格式以及标签样式
+        console.log(p.textContent); //textContent属性在去掉标签后会保留文本格式
+    </script> -->
+
+    <!-- 操作元素的属性 -->
+    <!-- 案例：根据按钮名称 点击后显示对应的图片 -->
+    <!-- <button id="flower">花</button>
+    <button id="grass">草</button>
+    <br>
+    <img src="./images/flower.png" title="花" alt="" srcset="">
+    <script>
+        var btnf = document.getElementById('flower');
+        var btng = document.getElementById('grass');
+        var img = document.querySelector('img');
+        btnf.onclick = function() {
+            img.src = './images/flower.png';
+            img.title = "花";
+        }
+        btng.onclick = function() {
+            img.src = './images/grass.png';
+            img.title = "草";
+        }
+    </script> -->
+
+
+    <!-- 案例：点击按钮后 文本框内容改变切按钮被禁用 -->
+    <!-- <button>按钮</button>
+    <input type="text" name="" id="" value="输入内容">
+    <script>
+        var btn = document.querySelector('button');
+        var txt = document.querySelector('input');
+        btn.onclick = function() {
+            txt.value = '被点击了！'; //此处不能用innerText 
+            this.disabled = true; //this指向时间函数的调用者 即btn本身
+        }
+    </script> -->
+
+
+    <!-- 案例：通过点击睁开、闭眼图片控制input框里密码的显示和隐藏 -->
+    <!-- <div>
+        <input type="password" name="" id="">
+        <img src="./images/close.png" alt="" srcset="">
+    </div>
+    <script>
+        var input = document.querySelector('input');
+        var img = document.querySelector('img');
+        var flag = false;
+        img.onclick = function() {
+            if (!flag) {
+                img.src = './images/open.png';
+                input.type = 'text';
+                flag = true;
+            } else {
+                img.src = './images/close.png';
+                input.type = 'password';
+                flag = false;
+            }
+        }
+    </script> -->
+
+
+    <!-- 操作元素的样式  一种是操作style属性，另一种是操作className属性。
+-->
+    <!-- 操作style属性 -->
+    <!-- <div>盒子1</div>
+    <script>
+        var box = document.querySelector('div');
+        box.style.height = '100px';
+        box.style.width = '100px';
+        box.style.background = 'yellow';
+
+        //样式属性名对应CSS样式名，但需要去掉CSS样式名里的半字线“-”，并将半字线后面的英文的首字母大写。
+    </script> -->
+    <!-- 操作className属性 -->
+    <div class="box">盒子2</div>
+    <script>
+        var box = document.querySelector('div');
+        // box.className = 'box1';
+        box.className = 'box box1'; //多个样式之间空一格
+    </script>
+
+
+
+</body>
+
+</html>

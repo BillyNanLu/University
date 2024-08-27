@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      var rg = /^[^a-z]$/;
+      console.log(rg.test('a'));    // 结果为：false
+      console.log(rg.test('z'));    // 结果为：false
+      console.log(rg.test('1'));    // 结果为：true
+      console.log(rg.test('A'));    // 结果为：true
+    </script>
+  </body>
+</html>

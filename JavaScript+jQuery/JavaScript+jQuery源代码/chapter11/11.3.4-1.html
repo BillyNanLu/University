@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script src="jquery-3.3.1.min.js"></script>
+  </head>
+  <body>
+    <ul>
+      <li>我是已有的li</li>
+    </ul>
+    <script>
+      var li = $("<li>我是后来创建的li-放后面</li>");
+      $("ul").append(li);  		// 内部添加并且放到内部的最后面
+      var li = $("<li>我是后来创建的li-放前面</li>");
+      $("ul").prepend(li); 		// 内部添加并且放到内部的最前面
+    </script>
+  </body>
+</html>

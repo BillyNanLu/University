@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      class Person { }
+      console.log(Person.prototype);          // 类也有原型对象
+      Person.prototype.money = function () {  // 类也可以增加方法
+        console.log(100000);
+      };
+      new Person().money();                   // 输出结果：100000
+    </script>
+  </body>
+</html>

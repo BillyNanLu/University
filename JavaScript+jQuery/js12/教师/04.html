@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>定时器</title>
+    <style>
+        div {
+            width: 300px;
+            height: 300px;
+            background-color: red;
+        }
+    </style>
+</head>
+
+<body>
+    <script>
+        //1.setTimeout(调用函数，[延迟的毫秒数]) 在指定的毫秒数后调用函数或执行一段代码
+
+
+        // window.setTimeout(fn, 1000); //window可省
+
+        // function fn() {
+        //     console.log('到一秒钟了');
+        // }
+    </script>
+    <!-- <button>删除定时器</button>
+    <div>广告</div>
+    <script>
+        var btn = document.querySelector('button');
+        var div = document.querySelector('div');
+        //3秒钟后，广告盒子隐藏
+        var timer = setTimeout(function() { //给定时器一个标识符
+            div.style.display = 'none';
+        }, 3000)
+
+
+        //clearTimeout(定时器标识)
+        //点击按钮  删除定时器
+        btn.onclick = function() {
+            clearTimeout(timer);
+        }
+    </script> -->
+
+    <!-- <button>删除定时器</button>
+    <script>
+        var btn = document.querySelector('button');
+        //2.setInterval(调用函数，[延迟的毫秒数]) 按照指定的周期（每间隔制定毫秒数）就来调用一次函数或执行一段代码
+        var timer1 = setInterval(function() {
+            console.log('又到一秒钟了');
+        }, 1000)
+
+        //删除定时器 clearInterval(定时器标识)
+        btn.onclick = function() {
+            clearInterval(timer1);
+        } -->
+    </script>
+
+
+
+
+    <!-- 60s内发送一次短信 -->
+    <input type="text">
+    <button>发送</button>
+    <script>
+        // var ipt = document.querySelector('input');
+        var btn = document.querySelector('button');
+        var time = 60;
+        btn.onclick = function() {
+            this.disabled = true; //此处this指向btn对象
+            var timer = window.setInterval(function() {
+                if (time == 0) {
+                    clearInterval(timer);
+                    btn.disabled = false;
+                    btn.innerHTML = '发送';
+                    time = 60;
+                } else {
+                    btn.innerText = '还剩' + time + '秒'; //此处不能用this，因为this指向省略的window对象
+                    time--;
+                }
+
+            }, 1000)
+
+        }
+    </script>
+</body>
+
+</html>

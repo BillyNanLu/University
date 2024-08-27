@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jQuery属性操作</title>
+    <script src="./js/jQuery-3.6.4.min.js"></script>
+    <script>
+        $(function() {
+            //1.prop()方法 prop()方法用来设置或获取元素固有属性值。
+            // prop()方法获取属性值语法： $(selector).prop("属性名")。
+            console.log($('a').prop(''));
+            // prop()方法设置属性值语法： $(selector).prop("属性", "属性值")
+            $('a').prop('href', 'http://www.shafc.edu.cn')
+
+            console.log($('input').prop('checked'));
+
+
+            //2.attr()方法：attr()用来设置或获取元素的自定义属性，自定义属性是指用户给元素添加的非固有属性。
+            //attr()方法获取属性值语法： $(selector).attr("属性名")	。
+            console.log($('div').prop('index')); //自定义属性不能通过prop方法获取或设置
+            console.log($('div').attr('index'));
+            //attr()方法设置属性值语法： $(selector).attr("属性", "属性值")
+            $('div').attr('data-index', '100')
+
+
+            //data()方法 data()方法用来在指定的元素上存取数据，数据保存在内存中，并不会修改DOM元素结构；
+            //data()方法设置属性值语法： $(selector).data("数据名", "数据值")
+            $('div').data('uname', 'Jack')
+
+
+            //data()方法获取属性值语法： $(selector).data("数据名")
+            console.log($('div').data('uname'));
+
+
+        })
+    </script>
+</head>
+
+<body>
+    <a href="http://www.baidu.com">百度</a>
+    <input type="checkbox" checked name="" id="">
+    <div index='1' data-index='2'>盒子</div>
+</body>
+
+</html>

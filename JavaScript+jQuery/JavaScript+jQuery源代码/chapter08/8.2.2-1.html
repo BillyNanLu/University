@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // 方式1
+      window.onresize = function () {
+        console.log('onresize');
+      };
+      // 方式2
+      window.addEventListener('resize', function () {
+        console.log('resize');
+      });
+    </script>
+  </body>
+</html>

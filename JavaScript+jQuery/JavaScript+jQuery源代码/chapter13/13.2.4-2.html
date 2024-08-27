@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      var func = new Function('a', 'b', 'return a + b;');
+
+      // var func = function (a, b) {
+      //   return a + b;
+      // };
+
+      console.log(func(100, 200));    // 输出结果：300
+    </script>
+  </body>
+</html>

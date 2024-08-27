@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>jQuery选择器</title>
+    <script src="./js/jquery-3.7.0.min.js"></script>
+</head>
+
+<body>
+    <div class="father" id="box">
+        <div class="son"></div>
+        <a href="#">链接</a>
+        <ul>
+            <li>咖啡</li>
+            <li>茶</li>
+            <li>牛奶</li>
+        </ul>
+    </div>
+    <ul class="father">
+        <li>北京
+            <ul class='city'>
+                <li>东城区</li>
+                <li>西城区</li>
+                <li>海淀区</li>
+            </ul>
+        </li>
+        <li>上海</li>
+        <li>广州</li>
+        <li>深圳</li>
+        <li>重庆</li>
+        <li>天津</li>
+    </ul>
+
+    <script>
+        //基础选择器
+        // console.log($('div'));  //标签选择器
+        // console.log($('.father')); //类选择器
+        // console.log($('#box'));  //id选择器
+        // console.log($('*'));  //全选选择器
+        //交集选择器
+        // console.log($('div.father'));
+
+        //并集选择器
+
+        // console.log($('.son,ul.father'));
+
+
+
+        //jQuery层级选择器
+        //$("ul li") 后代选择器 获取后代元素
+        // console.log($('ul.father li'));
+        //$("ul > li")
+        //子代选择器选择器获取子级元素
+        // console.log($('ul.father>li'));
+
+        //隐式迭代 给匹配到的所有元素自动循环遍历 执行相应的方法 而不用我们手动循环
+        // $('ul.city>li').css('backgroundColor', 'red');
+
+        //筛选选择器 通常和别的选择器搭配使用。
+        // console.log($('ul.father>li:first'));
+        // console.log($('ul.father>li:last'));
+        // console.log($('ul.father >li:eq(3)')); //注意index不加引号
+        // console.log($('ul.father>li:odd'));  //选择索引为奇数的元素
+        // console.log($('ul.father>li:even')); //选择索引为偶数的元素
+
+
+        //常用的筛选方法
+        // console.log($('div.son').parent());  //查找父级元素
+
+        // console.log($('div.father').children('div')); //查找子级元素
+        // console.log($('ul.father').children('li'));
+        // console.log($('ul.father').find('li')); //查找后代
+        // console.log($('ul.father>li:first').siblings()); //查找兄弟节点
+        // console.log($('ul.father>li:eq(2)').nextAll()); //查找当前元素之后所有的同辈元素
+        //prevAll([expr])  查找当前元素之前所有的同辈元素
+
+        // console.log($('#box').hasClass('father')); //检查当前的元素是否含有特定的类，返回true或false
+        console.log($('ul.father > li').eq(2)); //相当于$('元素:eq(index)')
+    </script>
+</body>
+
+</html>

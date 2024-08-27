@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+      .current {
+        background-color: red;
+      }
+    </style>
+    <script src="jquery-3.3.1.min.js"></script>
+  </head>
+  <body>
+    <div>添加类名</div>
+    <div class="current">删除类名</div>
+    <div class="current">切换类名</div>
+    <script>
+      $("div").click(function () {
+        $(this).addClass("current");
+        // $(this).addClass("current current1");
+      });
+    </script>
+  </body>
+</html>

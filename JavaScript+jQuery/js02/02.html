@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>数据类型转换</title>
+    <script>
+        //一. 转换为字符串型
+        //1.用“+”字符串的拼接   ******
+        // var via = 6;
+        // via = via + '';   
+        // console.log(via);
+        // 2. toStirng()
+        // var via = 6;
+        // console.log(via.toString());
+
+        // 3.String（）
+        // var via = 6;
+        // console.log(String(via));
+
+
+        // 二.转换为数字型
+        //         1.使用parseInt()将字符串转为整数  向下取整
+        // console.log(parseInt('3.14')); //3
+        // console.log(parseInt('3.94')); //3
+        // console.log(parseInt('3.14rem')); //3
+        // console.log(parseInt('rem3.14')); //NaN
+        // // 使用parseFloat()将字符串转为浮点数
+        // console.log(parseFloat('3.14')); //3.14
+        // console.log(parseFloat('3.14rem')); //3.14
+        // console.log(parseFloat('rem3.14')); //NaN
+
+        // // 使用Number()将字符串转为数字型
+        // console.log(Number('3.156')); //3.156
+        // 利用算术运算符（-、*、/）隐式转换   ********
+        // var via = '6';
+        // // via = via - 0;
+        // // via = via * 1;
+
+        // console.log(via);
+        // console.log(typeof via);
+
+
+        //案例：输入出生年份，计算年龄
+        // var year = prompt('请输入你的出生年份：');
+        // console.log(typeof year); //sring
+        // var age = 2023 - year; //通过 - 做了隐式转换  
+        // alert('您今年' + age + '岁了!');
+
+        //案例：简单加法器
+        // var num1 = prompt('请输入数字1');
+        // var num2 = prompt('请输入数字2');
+        // var result = Number(num1) + Number(num2);
+        // console.log(result);
+
+
+
+        // console.log(0.07 * 100); 浮点数的计算问题
+
+        // 三.转换为布尔型 Boolean（）
+        // console.log(Boolean(233)); 
+        // console.log(Boolean(' '));
+        // console.log(Boolean(0));
+        // console.log(Boolean(''));
+        // console.log(Boolean(undefined));
+        // console.log(Boolean(null));
+        // console.log(Boolean(NaN));
+    </script>
+
+</head>
+
+<body>
+
+</body>
+
+</html>

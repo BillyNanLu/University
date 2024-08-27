@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+      ul {
+        padding: 8px;
+        border: 1px solid #ccc;
+      }
+    </style>
+    <script src="jquery-3.3.1.min.js"></script>
+  </head>
+  <body>
+    <ul class="ul1">
+      <li>我是第1个ul里的li</li>
+    </ul>
+    <ul class="ul2">
+      <li>我是第2个ul里的li</li>
+    </ul>
+    <ul class="ul3">
+      <li>我是第3个ul里的li</li>
+    </ul>
+    <script>
+      $(".ul1").remove(); 		// 删除匹配的元素
+      $(".ul2").empty(); 		  // 删除匹配的元素里面的子节点
+      $(".ul3").html("")      // 删除匹配的元素里面的所有内容
+    </script>
+  </body>
+</html>

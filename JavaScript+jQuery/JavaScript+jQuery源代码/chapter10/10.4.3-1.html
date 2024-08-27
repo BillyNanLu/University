@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script src="jquery-3.3.1.min.js"></script>
+  </head>
+  <body>
+    <script>
+      $("div").stop();				       // 停止当前动画，继续下一个动画
+      $("div").stop(true);		       // 清除div元素动画队列中的所有动画
+      $("div").stop(true, true);	   // 停止当前动画，清除动画队列中的所有动画
+      $("div").stop(false, true);	   // 停止当前动画，继续执行下一个动画
+    </script>
+  </body>
+</html>

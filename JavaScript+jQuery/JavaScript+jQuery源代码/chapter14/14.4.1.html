@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      var str = "It's is the shorthand of it is";
+      var reg1 = /it/gi;
+      console.log(str.match(reg1));    // 匹配结果：(2) ["It", "it"]
+      var reg2 = /^it/gi;
+      console.log(str.match(reg2));    // 匹配结果：["It"]
+      var reg3 = /s/gi;
+      console.log(str.match(reg3));    // 匹配结果：(4) ["s", "s", "s", "s"]
+      var reg4 = /s$/gi;
+      console.log(str.match(reg4));    // 匹配结果：["s"]
+    </script>
+  </body>
+</html>

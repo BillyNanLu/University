@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>节点基础</title>
+</head>
+
+<body>
+    <!-- <div class="demo">
+        <div class="box"><span class="child">span元素</span></div>
+    </div>
+    <script>
+        //获取父节点 obj.parentNode 获得离当前元素的最近的一个父节点，如果找不到父节点就返回为 null
+        var span = document.querySelector('.child');
+        console.log(span.parentNode);
+    </script> -->
+
+
+    <ul>
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+        <li>4</li>
+    </ul>
+    <script>
+        //获取子级节点 
+        //childNodes 获得的是当前元素的所有子节点的集合 包含文本等节点
+        var ul = document.querySelector('ul');
+        console.log(ul.childNodes);
+        console.log(ul.childNodes[0].nodeType);
+        console.log(ul.childNodes[1].nodeType);
+
+        //children  获得的是当前元素的所有元素节点的集合 更加实用
+        console.log(ul.children);
+        console.log(ul.children[0]);
+        //firstChild属性和lastChild   获得的是第一个子节点，后者返回的是最后一个子节点，如果找不到则返回null。需要注意的是它们的返回值包括文本节点和元素节点等。
+
+        console.log(ul.firstChild);
+        console.log(ul.lastChild);
+        //firstElementChild属性和lastElementChild   获得的是第一个子元素节点，后者返回的是最后一个子元素节点 更加使用频繁
+        console.log(ul.firstElementChild);
+        console.log(ul.lastElementChild);
+
+
+
+        //获取兄弟节点
+        //可以使用nextSibling属性获得下一个兄弟节点，或者使用previousSibling属性获得上一个兄弟节点，它们的返回值包含元素节点或者文本节点等。如果找不到，就返回null。
+
+        var li01 = document.querySelector('li');
+        console.log(li01.nextSibling);
+        console.log(li01.previousSibling);
+
+        //可以使用nextElementSibling返回当前元素的下一个兄弟元素节点，previousElementSibling属性返回当前元素的上一个兄弟元素节点，如果找不到则返回null。
+        console.log(li01.nextElementSibling);
+        console.log(li01.previousElementSibling); //null
+    </script>
+
+
+</body>
+
+</html>

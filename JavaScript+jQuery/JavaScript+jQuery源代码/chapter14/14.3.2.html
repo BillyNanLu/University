@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      var res = '1234'.match(/(\d)(\d)(\d)(\d)/);
+      console.log(res);
+
+      var str = 'Regular Capture';
+      var reg = /(\w+)\s(\w+)/gi;
+      var newstr = str.replace(reg, '$2 $1');
+      console.log(newstr); // 输出结果为：Capture Regular
+
+      // ① 非捕获
+      var reg = /(?:J)(?:S)/;
+      var res = 'JS'.replace(reg, '$2 $1');
+      console.log(res); // 输出结果：$2 $1
+
+      // ② 捕获
+      var reg = /(J)(S)/;
+      var res = 'JS'.replace(reg, '$2 $1');
+      console.log(res); // 输出结果：S J
+
+      var str = 'webWEBWebwEb';
+      var reg1 = /w.*b/gi;    // 贪婪匹配
+      var reg2 = /w.*?b/gi;   // 懒惰匹配
+      // 输出结果为：["webWEBWebwEb", index: 0, input: "webWEBWebwEb"]
+      console.log(reg1.exec(str));
+      // 输出结果为：["web", index: 0, input: "webWEBWebwEb"]
+      console.log(reg2.exec(str));
+
+      var str = '13335 12345 56668';
+      var reg = /(\d)\1\1/gi;
+      var match = str.match(reg);
+      console.log(match); // 输出结果为：(2) ["333", "666"]
+    </script>
+  </body>
+</html>

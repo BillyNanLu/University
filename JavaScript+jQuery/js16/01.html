@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="./js/jquery-3.2.1.min.js"></script>
+    <script>
+        $(function() {
+            // 1. prop() 方法
+            console.log($('a').prop(''))
+            $('a').prop('href', 'http://www.shafc.edu.cn')
+
+            $('input').prop('checked')
+            console.log($('input').prop('checked'))
+
+            // 2. attr() 方法
+            console.log($('div').prop('index'))  // 自定义属性不能通过prop方法获取
+            console.log($('div').attr('index'))
+            $('div').attr('data-index', '100')
+
+            // 3.data()  方法
+            $('div').data('uname', 'Jack')
+            console.log($('div').data('uanme'))
+        })
+    </script>
+</head>
+
+<body>
+    <a href="www.baidu.com">百度</a>
+    <input type="checkbox" checked name="" id="">
+    <div index="1", data-index="2">盒子</div>
+</body>
+
+</html>

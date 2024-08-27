@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script src="jquery-3.3.1.min.js"></script>
+  </head>
+  <body>
+    <script>
+      var obj = {
+        fn1: function () {
+          console.log('fn1');
+          return {			// fn1()调用完成后可以链式调用fn2()方法
+            fn2: function () {
+              console.log('fn2');
+            }
+          };
+        }
+      };
+      // 链式调用测试
+      obj.fn1().fn2();
+    </script>
+  </body>
+</html>

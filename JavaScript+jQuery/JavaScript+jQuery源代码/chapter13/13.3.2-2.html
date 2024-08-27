@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      function method(a, b) {
+        console.log(a + b);
+      }
+      method.apply({}, ['1', '2']);  // 数组方式传参，输出结果：12
+      method.call({}, '3', '4');     // 参数方式传参，输出结果：34
+    </script>
+  </body>
+</html>

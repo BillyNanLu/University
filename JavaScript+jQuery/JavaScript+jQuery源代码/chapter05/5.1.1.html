@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // 假设现在有一个手机对象p1，通过代码创建出来
+      var p1 = {
+        color: '黑色',
+        weight: '188g',
+        screenSize: '6.5',
+        call: function (num) {
+          console.log('打电话给' + num);
+        },
+        sendMessage: function (num, message) {
+          console.log('给' + num + '发短信，内容为：' + message);
+        },
+        playVideo: function () {
+          console.log('播放视频');
+        },
+        playMusic: function () {
+          console.log('播放音乐');
+        }
+      };
+      // 访问p1的属性
+      console.log(p1.color);		// 输出结果：“黑色”，表示手机的颜色为黑色
+      console.log(p1.weight);		// 输出结果：“188g”，表示手机的重量为188克
+      console.log(p1.screenSize);	// 输出结果：“6.5”，表示手机的屏幕尺寸为6.5英寸
+      // 调用p1的方法
+      p1.call('123');						// 调用手机的拨打电话方法，拨打号码为123
+      p1.sendMessage('123', 'hello');		// 给电话号码123发短信，内容为hello
+      p1.playVideo();						// 调用手机的播放视频方法
+      p1.playMusic();						// 调用手机的播放音乐方法
+    </script>
+  </body>
+</html>

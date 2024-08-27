@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      var str = 'Hello World, Hello JavaScript';
+      var index = str.indexOf('o');
+      var num = 0;
+      while (index != -1) {
+        console.log(index);					       // 依次输出：4、7、17
+        index = str.indexOf('o', index + 1);
+        num++;
+      }
+      console.log('o出现的次数是：' + num);	// o出现的次数是：3
+    </script>
+  </body>
+</html>

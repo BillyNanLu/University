@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>鼠标和键盘事件</title>
+    <style>
+        body {
+            height: 3000px;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- <p>禁止我啊！</p>
+    <script>
+        //contextmenu主要控制应该何时显示上下文菜单，主要应用于程序员取消默认的上下文菜单
+        document.addEventListener('contextmenu', function(e) {
+                e.preventDefault();
+            })
+            //selectstart事件是鼠标开始选择文字时就会触发，如果禁止鼠标选中，需要禁止该事件的默认行为
+        document.addEventListener('selectstart', function(e) {
+            e.preventDefault();
+        })
+    </script> -->
+    <!-- 鼠标事件对象MouseEvent -->
+    <script>
+        document.addEventListener('click', function(e) {
+            //clientX clientY 鼠标指针位于浏览器页面当前窗口可视区的水平坐标和垂直坐标
+
+            console.log(e.clientX);
+            console.log(e.clientY);
+            //pageX .pageY 鼠标指针位于文档的水平坐标和垂直坐标
+            console.log(e.pageX);
+            console.log(e.pageY);
+            //screenX screenY 鼠标指针位于屏幕的水平坐标和垂直坐标
+
+
+        })
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // 全局作用域
+      var num = 10;		  // 全局变量
+      function fn() {
+        // 局部作用域
+        var num = 20;		// 局部变量
+        console.log(num);	// 输出局部变量num的值，输出结果：20
+      }
+      fn();
+      console.log(num);	// 输出全局变量10的值，输出结果：10
+    </script>
+  </body>
+</html>

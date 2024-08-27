@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // 先准备一个父类
+      class Father {
+        constructor() {
+        }
+        money() {		// 父类中的方法可以被子类继承
+          console.log(100);
+        }
+      }
+      // 子类继承父类
+      class Son extends Father {
+      }
+      // 创建子类对象
+      var son = new Son();
+      son.money();	// 输出结果：100
+    </script>
+  </body>
+</html>

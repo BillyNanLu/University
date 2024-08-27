@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM(下)</title>
+</head>
+
+<body>
+    <!-- 排他思想 -->
+    <button>按钮1</button>
+    <button>按钮2</button>
+    <button>按钮3</button>
+    <button>按钮4</button>
+    <button>按钮5</button>
+    <script>
+        var btns = document.querySelectorAll('button');
+        for (var i = 0; i < btns.length; i++) {
+            btns[i].onclick = function() {
+                //1.清除所有按钮的背景色
+                for (var i = 0; i < btns.length; i++) {
+                    btns[i].style.backgroundColor = '';
+                }
+                //2.给当前被点击的按钮背景设置颜色
+                this.style.backgroundColor = 'red';
+            }
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      var arr = [[12, 59, 66], [100, 888]];
+      var sum = 0;
+      for (var i = 0; i < arr.length; i++) {		  	// 遍历arr数组
+        for (var j = 0; j < arr[i].length; j++) {		// 遍历arr[i]数组
+          sum += arr[i][j];							            // 二维数组元素累加
+        }
+      }
+      console.log(sum);	// 输出结果：1125
+    </script>
+  </body>
+</html>

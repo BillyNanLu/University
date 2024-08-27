@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      function Person(name, age) {
+        this.name = name;
+        this.age = age;
+        this.sing = function () {
+          console.log('我会唱歌');
+        };
+      }
+      var p1 = new Person('张三', 18);
+      var p2 = new Person('李四', 19);
+      console.log(p1.name);		// 输出结果：张三
+      console.log(p2.age);		// 输出结果：19
+      p2.sing();					    // 输出结果：我会唱歌
+    </script>
+  </body>
+</html>

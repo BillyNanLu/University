@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // 使用Array创建数组
+      var info = new Array(
+        new Array('Tom', 13, 155),
+        new Array('Lucy', 11, 152)
+      );
+      console.log(info[0]);		  // 输出结果：(3) ["Tom", 13, 155]
+      console.log(info[0][0]);	// 输出结果：Tom
+      // 使用“[]”创建数组
+      var nums = [[1, 2], [3, 4]];
+      console.log(nums[0]);	  	// 输出结果：(2) [1, 2]
+      console.log(nums[1][0]);	// 输出结果：3
+    </script>
+  </body>
+</html>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // ① 使用typeof查看数组的数据类型
+      console.log(typeof []);		// 输出结果：object
+      // ② 当数组的索引是字符串时，它将变成一个类数组对象，不再是一个纯数组
+      var arr = [];
+      arr['name'] = 'Tom';
+      console.log(arr['name']);	// 输出结果：Tom
+      // ③ 当对数组类型的变量进行赋值时，会发生引用传递，而不是值传递
+      var arr1 = [1, 2];
+      var arr2 = arr1;		     	// 引用传递，arr2和arr1引用同一个数组
+      arr2[2] = 3;			    	  // 此时arr2相当于arr1的别名
+      console.log(arr1);			  // 输出结果：[1, 2, 3]
+    </script>
+  </body>
+</html>

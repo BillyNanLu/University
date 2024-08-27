@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script src="jquery-3.3.1.min.js"></script>
+  </head>
+  <body>
+    <a href="http://localhost" title="主页"></a>
+    <script>
+      console.log($("a").prop("href"));	 	// 输出结果：http://localhost
+      $("a").prop("title", "首页"); 		 	// 设置title的值为“首页”
+    </script>
+  </body>
+</html>

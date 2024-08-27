@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>数组</title>
+    <script>
+        //数组的创建
+        //使用“new Array()”创建数组
+        /* var arr = new Array(); //创建一个空数组
+        var arr1 = new Array(1, '', true, 88);
+        console.log(arr, arr1); */
+
+        //使用“[ ]”字面量来创建数组
+        /* var arr = []; //创建一个空数组
+        var arr1 = [1, '', true, 88];
+        console.log(arr, arr1) */
+
+        //访问数组元素：使用索引数字,从0开始
+        /*      var arr = [1, '', true, 88];
+             console.log(arr[0]); //1
+             console.log(arr[1]); //''
+             console.log(arr[2]); //true
+             console.log(arr[3]); //88
+             console.log(arr[4]); //undefined */
+        //遍历数组 用for循环实现
+        /*  var arr = [1, '', true, 88, false, '18'];
+         for (var i = 0; i < arr.length; i++) { //可以利用“数组名.length”来快速地获取数组长度。
+             console.log(arr[i]);
+         } */
+
+        //获取数组元素中的最大值
+        /* var arr = [2, 6, 1, 77, 52, 25, 7, 99, 101, 65, 44, 33];
+
+        var max = arr[0];
+        for (var i = 1; i < arr.length; i++) {
+            if (max < arr[i]) {
+                max = arr[i];
+            }
+        }
+        console.log('最大值是' + max); */
+
+        //数组转换为字符串 元素间用‘|’分隔
+        /* var arr = ['red', 'green', 'blue', 'pink'];
+        var sep = prompt('请输入分隔符：')
+        var str = '';
+        for (var i = 0; i < arr.length; i++) {
+            str += arr[i] + sep;
+        }
+        console.log(str); */
+
+
+        //修改数组长度
+        //获取数组长度
+        /*  var arr = ['a', 'b', 'c'];
+         console.log(arr.length); // 输出结果：3
+
+         //修改长度
+         arr.length = 4;
+         console.log(arr); //['a', 'b', 'c', empty] */
+
+        // var arr2 = [1, 2, 3, 4];
+        // arr2.length = 2; // 小于原有长度 
+        // console.log(arr2);
+
+
+
+        //访问空元素时，返回结果为undefined
+        //出现空元素的其他常见的情况：
+        // 情况1：在使用字面量创建数组时出现空元素
+
+        /*    var arr = [1, 2, , 4];
+           console.log(arr); // [1, 2, empty, 4] */
+        // 情况2：在new Array()中传入数组长度的参数
+        /* var arr = new Array(4);
+        console.log(arr); */
+        // 情况3：为数组添加索引不连续的元素
+        /* var arr = [1];
+        arr[3] = 4; // 向数组中添加一个元素，索引为3
+        console.log(arr); // 输出结果：(4) [1, empty × 2, 4] */
+
+
+        //新增或修改数组元素
+        //如果给定的索引超过了数组中的最大索引，则表示新增元素，否则表示修改元素。
+        /*  var arr = [1, 2, 3];
+         arr[1] = '2'; //修改元素
+
+         arr[3] = 4; //新增元素
+         console.log(arr); */
+
+
+        //删除指定的数组元素
+        //案例需求：将一个数组中所有数值为0的元素删除。
+        /*  var arr = [2, 0, 6, 1, 77, 0, 52, 0, 25, 7];
+         var newArr = [];
+         var j = 0;
+         for (var i = 0; i < arr.length; i++) {
+             if (arr[i] != 0) {
+                 newArr[j] = arr[i];
+                 j++;
+             }
+         }
+         console.log(newArr); */
+
+        /*  var arr = [2, 0, 6, 1, 77, 0, 52, 0, 25, 7];
+        var newArr = [];
+
+        for (var i = 0; i < arr.length; i++) {
+            if (arr[i] != 0) {
+                newArr[newArr.length] = arr[i]; //巧用newArr.length
+
+            }
+        }
+        console.log(newArr); */
+
+        //反转数组元素顺序
+        //案例需求：将一个数组中所有元素的顺序反过来。
+        /* var arr = ['red', 'green', 'blue', 'pink', 'purple'];
+        var newArr = [];
+        for (var i = arr.length - 1; i >= 0; i--) {
+            newArr[newArr.length] = arr[i];
+        }
+        console.log(newArr); */
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

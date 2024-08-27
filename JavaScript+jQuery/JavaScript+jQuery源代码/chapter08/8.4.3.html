@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      console.log(1);
+      setTimeout(function () {
+        console.log(3);
+      }, 0);
+      for (var i = 0, str = ''; i < 900000; i++) {
+        str += i;		// 利用字符串拼接运算拖慢执行时间
+      }
+      console.log(2);
+    </script>
+  </body>
+</html>

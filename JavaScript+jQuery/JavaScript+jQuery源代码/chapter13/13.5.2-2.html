@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      function Father() { }
+      Father.prototype.money = function () {
+        console.log(100000);
+      };
+      function Son() { }
+      Son.prototype = Father.prototype;     // 通过这种方式无法实现真正的继承
+      Son.prototype.exam = function () { }; // 为子类增加方法的时候，会影响父类
+      console.log(Father.prototype.exam);   // 可以看到父类也有了exam方法
+    </script>
+  </body>
+</html>

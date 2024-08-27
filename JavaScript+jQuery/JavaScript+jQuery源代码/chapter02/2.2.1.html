@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // 先准备一个变量
+      var num = 3.14;
+      // 方式1：利用“+”拼接字符串（最常用的一种方式）
+      var str = num + '';
+      console.log(str, typeof str);				// 输出结果：3.14 string
+      // 方式2：利用toString()转换成字符串
+      var str = num.toString();
+      console.log(str, typeof str);				// 输出结果：3.14 string
+      // 方式3：利用String()转换成字符串
+      var str = String(num);
+      console.log(str, typeof str);				// 输出结果：3.14 string
+    </script>
+  </body>
+</html>

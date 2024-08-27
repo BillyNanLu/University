@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      var str = 'test@123.com';
+      var reg = /[@\.]/;
+      var split_res = str.split(reg);
+      console.log(split_res);   // 输出结果：(3) ["test", "123", "com"]
+
+      var str = 'We are a family';
+      var reg = /\s/;
+      var split_res = str.split(reg, 2);
+      console.log(split_res);  // 输出结果：(2) ["We", "are"]
+    </script>
+  </body>
+</html>

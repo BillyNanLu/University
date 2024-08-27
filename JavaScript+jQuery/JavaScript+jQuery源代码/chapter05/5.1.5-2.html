@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // 编写一个Student构造函数
+      function Student(name, age) {
+        this.name = name;
+        this.age = age;
+        this.sayHello = function () {
+          console.log('你好，我叫' + this.name);
+        };
+      }
+      // 使用Student构造函数创建对象
+      var stu1 = new Student('小明', 18);
+      console.log(stu1.name);				  // 输出结果：小明
+      console.log(stu1.sayHello());		// 输出结果：你好，我叫小明
+      var stu2 = new Student('小红', 17);
+      console.log(stu2.name);			   	// 输出结果：小红
+      console.log(stu2.sayHello());		// 输出结果：你好，我叫小红
+    </script>
+  </body>
+</html>

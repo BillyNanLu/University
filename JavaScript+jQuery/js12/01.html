@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // 键盘事件
+        document.onkeyup = function() {
+            console.log('我弹起了up')
+        }
+        document.onkeydown = function() {
+            console.log('我按下了down')
+        }
+        document.onkeypress = function() {
+            console.log('我按下了press')
+        }
+
+        document.onkeypress = function(e) {
+            console.log('我按下了press')
+            console.log(e.keyCode)
+        }
+    </script>
+</body>
+
+</html>

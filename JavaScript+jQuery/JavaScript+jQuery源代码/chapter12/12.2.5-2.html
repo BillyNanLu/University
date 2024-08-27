@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      class Father {
+        say() {
+          return '我是父类';
+        }
+      }
+      class Son extends Father {
+        say() {
+          console.log(super.say() + '的子类');
+        }
+      }
+      var son = new Son(1, 2);
+      son.say();			// 输出结果：我是父类的子类
+    </script>
+  </body>
+</html>

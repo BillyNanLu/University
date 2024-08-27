@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      function fn() {
+        var times = 0;
+        var c = function () {
+          return ++times;
+        };
+        return c;
+      }
+      var count = fn();  		// 保存fn()返回的函数，此时count就是一个闭包
+      // 访问测试
+      console.log(count());	// 输出结果：1
+      console.log(count());	// 输出结果：2
+      console.log(count());	// 输出结果：3
+      console.log(count());	// 输出结果：4
+      console.log(count());	// 输出结果：5
+    </script>
+  </body>
+</html>

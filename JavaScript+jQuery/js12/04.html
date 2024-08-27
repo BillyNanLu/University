@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>定时器</title>
+    <style>
+        div {
+            width: 300px;
+            height: 300px;
+            background-color: lightpink;
+        }
+    </style>
+</head>
+
+<body>
+    <script>
+        // 1. window.setTimeout(fn, 1000)  // window 可省
+
+        /* function fn() {
+            console.log('到一秒钟了');
+        } */
+    </script>
+
+    <!-- <button>删除定时器</button>
+    <div>广告</div> -->
+    <script>
+        /* let btn = document.querySelector('button')
+        let div = document.querySelector('div')
+        let timer = setTimeout(function() {
+            div.style.display = 'none'
+        }, 3000)
+        
+        // clearTimeout(定时器名称)  // 删除定时器
+        btn.onclick = function () {
+            clearTimeout(timer)
+        } */
+    </script>
+
+    <!-- <button>删除定时器</button> -->
+    <script>
+        /* let btn = document.querySelector('button')
+        // 2. setInterval
+        let timer1 = setInterval(function() {
+            console.log('又到一秒钟了');
+        }, 1000)
+
+        // clearInterval(定时器名称)  // 删除定时器
+        btn.onclick = function () {
+            clearInterval(timer1)
+        } */
+    </script>
+
+    <!-- 60s后重新发送 -->
+    <input type="text" name="" id="">
+    <button>发送</button>
+    <script>
+        let ipt = document.querySelector('input')
+        let btn = document.querySelector('button')
+        let time = 60
+        btn.onclick = function () {
+            btn.disabled = true
+            let timer = setInterval(() => {
+                if (time == 0) {
+                    clearInterval(timer)
+                    btn.disabled = false
+                    btn.innerHTML = '重新发送'
+                    time = 60
+                } else {
+                    btn.innerText = `还剩${time}s`  // 此处不能用this
+                    time--
+                }
+            }, 1000);
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script src="jquery-3.3.1.min.js"></script>
+  </head>
+  <body>
+    <div>1</div>
+    <div>2</div>
+    <div>3</div>
+    <script>
+      var arr = ["red", "green", "blue"];
+      $("div").each(function (index, domEle) {
+        console.log(index);				      	  // 查看索引号
+        console.log(domEle);				        // 查看DOM元素
+        $(domEle).css("color", arr[index]); // 对每个元素进行操作                                                              
+      });
+    </script>
+  </body>
+</html>

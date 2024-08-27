@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      var arr = [
+        ['a', 'b', 'c'], ['d', 'e', 'f'], ['g', 'h', 'i'], ['j', 'k', 'l']
+      ];
+      var res = [];
+      for (var i = 0; i < arr[0].length; i++) {
+        res[i] = [];
+        for (var j = 0; j < arr.length; j++) {
+          res[i][j] = arr[j][i];	// 为二维数组赋值
+        }
+      }
+      console.log(res);
+    </script>
+  </body>
+</html>

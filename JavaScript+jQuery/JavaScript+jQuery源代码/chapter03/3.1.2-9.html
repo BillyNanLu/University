@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      var str = '';
+      var i = 4;			  // 控制循环次数
+      for (str += '1'; i-- && (str += '2'); str += '4-') {
+        str += '3';
+      }
+      console.log(str);	// 输出结果：1234-234-234-234-
+    </script>
+  </body>
+</html>

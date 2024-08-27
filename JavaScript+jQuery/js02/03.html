@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>运算符</title>
+    <script>
+        // 1. 算术运算符 + - * / %
+        // console.log(1 + 1);
+        // console.log(5 - 3);
+        // console.log(2 * 3);
+        // console.log(8 / 4);
+        // console.log(-5 % 3); //取余 2
+        // console.log(8 % 4); //0
+
+        // console.log(0.07 * 100); 开发中尽量避免利用浮点数进行运算
+
+        // 表达式是各种类型的数据、变量和运算符的集合，最简单的表达式可以是一个变量或字面量。
+        // 注意：表达式最终都会有一个返回值。
+
+
+        //2.递增（++）、递减（--）运算符
+        var num = 10;
+        // num = num + 1;
+
+        // 前置递增跟后置递增单独使用时 效果一样 都等于自加1
+        // ++num; //前置递增
+        // num++; //后置递增
+
+
+
+        // var num2 = ++num + 10;      //21  前置递增，先加再用
+        // var num2 = num++ + 10; //20  后置递增 先用再加
+        // console.log(num2);
+        // console.log(num); //11
+
+
+        //案例
+        // var a = 10;
+        // var b = ++a + 2; //13
+        // console.log(b);
+
+        // var c = 10;
+        // var d = c++ + ++c; //10+12
+        // console.log(d);
+        // console.log(c); //12
+
+
+        // 3.比较运算符  返回布尔值 true或者false
+        // console.log(3 <= 5);
+        // console.log(8 < 6);
+        //==判断左右值是否相等
+        // console.log(123 == 456);
+        // console.log(123 == '123'); //true 只比较值 不比较数据类型
+
+        // //===全等判断  用于判断值和数据类型
+        // console.log(123 === '123'); //false 值相等但是类型一样
+        // //!= 不等于
+        // console.log(123 != '123'); //false
+
+        // //！==不全等于
+        // console.log(123 !== '123'); //true
+
+
+
+        //4.逻辑运算符 用于对布尔值进行运算，其返回值也是布尔值。
+        //&&两边均为true 返回值为true
+        // console.log(3 < 5 && 5 <= 8); //true
+        // console.log(3 > 5 && 5 < 8); //false
+
+        // //  ||两边只要有一个为true 结果就为true
+        // // console.log(3 > 5 || 5 < 8);  //true
+
+        // //  ! 逻辑非  
+        // console.log(!true); //false
+        // console.log((3 > 8)); //true
+
+        //逻辑中断   p26—27
+
+        //5.位运算符   p27
+
+
+        //6.赋值运算符  
+        //=
+        // var a = 22 + 12;
+        // console.log(a); //34
+
+        // var b = 11;
+        // // b = b + 10;
+        // //  +=  -=  *=   /=
+        // // b += 10;
+
+        // b *= 2;
+
+        // console.log(b);
+
+
+        //三元运算符  放到if  elseif语句里讲
+
+        //运算符优先级 QQ贴图
+
+
+        //运算符优先级案例
+        var num = 10;
+        console.log(5 == num / 2 && (1 + 1 * num).toString() === '11'); //true
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

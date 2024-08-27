@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      var str = 'Regular Capture';
+      var reg = /(\w+)\s(\w+)/gi;
+      var newstr = str.replace(reg, '$2 $1');
+      console.log(newstr); // 输出结果为：Capture Regular
+    </script>
+  </body>
+</html>

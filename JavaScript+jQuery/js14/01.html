@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jQuery(上)</title>
+    <style>
+        div {
+            width: 200px;
+            height: 200px;
+            background-color: red;
+        }
+    </style>
+    <!-- jQuery的引用 -->
+    <!-- 1.网址引用 -->
+    <!-- <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script> -->
+    <!-- 2.文件引用 -->
+    <script src="./js/jquery-3.7.0.min.js"></script>
+    <!-- 注：此处script开始与结束标签之间不可写代码 -->
+</head>
+
+<body>
+    <script>
+        // $('div').css('backgroundColor', 'red');
+        // 实现盒子的隐藏
+        // JavaScript原生代码
+
+        // var div = document.querySelector('div'); // 获取元素
+        // div.style.display = 'none'; // 对元素进行操作
+        // jQuery代码
+
+        //jQuery书写位置
+
+        /* 方法一：   
+        $(function() {
+            // 页面DOM加载后执行的代码
+        }) */
+        /* 方法二：
+          $(document).ready(function() {
+            // 页面DOM加载完成后执行的代码
+        }); */
+
+
+        $(function() {
+            // jQuery对象的表示方法：
+            // 方法一 ：使用“$”
+
+            // $("div").hide(); //更加简单便捷  使用更多
+            // 使用“jQuery”
+
+            // jQuery("div").hide();  
+
+
+
+            // jQuery对象的使用： 
+            // 创建jQuery对象，语法为“$(参数)”
+            // console.log($('div'));
+            //调用静态方法，语法为“$.方法名()”
+            // console.log($.trim(' a '));
+
+
+            //DOM对象和jQuery对象的方法不能混用
+            //DOM对象
+            // var box = document.querySelector('div');
+            // box.hide(); //无效
+            //DOM对象转换成jQuery对象
+            // $(box).hide();
+
+
+            //jQuery对象
+            // $('div').style.display = 'none'; //错误
+            //jQuery对象转换成DOM
+            var box = $('div')[0]; //$('div')是集合
+            box.style.display = 'none';
+        })
+    </script>
+    <div>
+
+    </div>
+    <script>
+    </script>
+
+</body>
+
+</html>

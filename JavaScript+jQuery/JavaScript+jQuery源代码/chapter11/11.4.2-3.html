@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+      .container {
+        width: 80px;
+        height: 80px;
+        background-color: pink;
+        overflow: scroll;
+      }
+
+      .son {
+        width: 200px;
+        height: 200px;
+      }
+    </style>
+    <script src="jquery-3.3.1.min.js"></script>
+  </head>
+  <body>
+    <div class="container">
+      <div class="son"></div>
+    </div>
+    <button>获取</button>
+    <script>
+      $('button').click(function () {
+        // 获取元素距离页面左侧的距离
+        console.log($(".container").scrollLeft());
+        // 获取元素距离页面顶部的距离
+        console.log($(".container").scrollTop());
+      });
+      // 设置元素距离页面左侧的距离
+      $(".container").scrollLeft(80);
+      // 设置元素距离页面顶部的距离
+      $(".container").scrollTop(100);
+    </script>
+  </body>
+</html>

@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      function fn() {
+        console.log(arguments);		      // 输出结果：Arguments(3) [1, 2, 3, …]
+        console.log(arguments.length);  // 输出结果：3
+        console.log(arguments[1]);		  // 输出结果：2
+      }
+      fn(1, 2, 3);
+    </script>
+  </body>
+</html>

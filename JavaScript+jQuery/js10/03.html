@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>事件进阶</title>
+</head>
+
+<body>
+    <!-- <button>按钮</button>
+
+    <script>
+        let btn = document.querySelector('button')
+        // 注册事件
+        // 传统方式
+        /* btn.onclick = function () {
+            alert('111')
+        } */
+        /* btn.onclick = function () {
+            alert('222')
+            this.onclick = null  // 传统事件监听的移除
+        } */
+
+        // 事件监听方式
+        // DOM对象 .addEventListener(type, callback, [capture])
+        /* btn.addEventListener('click', function () {
+            alert('111')
+        }) */
+        /* btn.addEventListener('click', function () {
+            alert('222')
+        }) */
+
+        // 事件删除
+    </script> -->
+
+    <!-- dom事件流 -->
+    <!-- <div class="father" style="width: 200px; height: 200px; background-color: yellow;">
+        <div class="son" style="width:100px; height: 100px; background-color: red;"></div>
+    </div>
+
+    <script>
+        // Js只能执行捕获或冒泡中的一个阶段
+        // onclick和attachEvent只能得到冒泡阶段
+        // addEventListener(type, callback, [capture]) [capture]缺省或false为捕获，值为true为冒泡
+        let father = document.querySelector('.father')
+        let son = document.querySelector('.son')
+        father.addEventListener('click', function () {
+            alert('son')
+            e.stopPropagation()  // 阻止事件冒泡
+        }, true)
+        son.addEventListener('click', function () {
+            alert('father')
+        },true)
+    </script> -->
+
+    <!-- 事件对象 -->
+    <!-- <button>按钮</button>
+
+    <script>
+        let btn = document.querySelector('button')
+        btn.onclick = function (e) {   // 用event 和 e 都可以
+            console.log(e)
+            console.log(e.type)
+            console.log(e.target);
+        }
+    </script> -->
+
+    <!-- <a href="http://www.baidu.com">百度</a>
+
+    <script>
+        let a = document.querySelector('a')
+        a.addEventListener('click', function (e) {
+            e.preventDefault()  // 阻止默认事件
+        })
+    </script> -->
+
+</body>
+
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // “短路”效果演示
+      console.log(123 && 456);					// 输出结果：456
+      console.log(0 && 456);						// 输出结果：0
+      console.log(0 && 1 + 2 && 456 - 56789);		// 输出结果：0
+      console.log(123 || 456);					// 输出结果：123
+      console.log(0 || 456);						// 输出结果：456
+      // “与”运算时，表达式1为false，则表达式2不执行
+      var num = 0;
+      console.log(123 && num++);				// 输出结果：0
+      console.log(num);						    	// 输出结果：1
+      console.log(0 && num++);					// 输出结果：0
+      console.log(num);						    	// 输出结果：1
+      // “或”运算时，表达式1为true，则表达式2不执行
+      var num = 0;
+      console.log(123 || num++);				// 输出结果：123
+      console.log(num);							    // 输出结果：0
+      console.log(0 || num++);					// 输出结果：0
+      console.log(num);							    // 输出结果：1
+    </script>
+  </body>
+</html>

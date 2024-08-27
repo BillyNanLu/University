@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      var a;
+      console.log(a);				    // 输出结果：undefined
+      console.log(a + '_');	    // 输出结果：undefined_（字符串型）
+      console.log(a + 1);		    // 输出结果：NaN
+      var b = null;
+      console.log(b + '_');	    // 输出结果：null_（字符串型）
+      console.log(b + 1);		  	// 输出结果：1（b转换为0）
+      console.log(b + true);		// 输出结果：1（b转换为0，true转换为1）
+    </script>
+  </body>
+</html>

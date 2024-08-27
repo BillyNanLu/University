@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>简易留言板</title>
+    <style>
+        li {
+            width: 200px;
+            height: 30px;
+            line-height: 30px;
+            background-color: #ccc;
+            margin-bottom: 2px;
+        }
+
+        a {
+            float: right;
+        }
+    </style>
+</head>
+
+<body>
+    <textarea name="" id="" cols="30" rows="10"></textarea>
+    <button>发布</button>
+    <ul></ul>
+
+    <script>
+        // 获取元素
+        let txt = document.querySelector('textarea')
+        let btn = document.querySelector('button')
+        let ul = document.querySelector('ul')
+
+        // 绑定事件
+        btn.onclick = function () {
+            // 创建li
+            let li = document.createElement('li')
+            // 添加li 到ul 的最前面
+            ul.insertBefore(li, ul.children[0])
+            // 给li添加内容
+            li.innerHTML = txt.value + '<a href="javascript:#">删除</a>'
+            txt.value = ''
+            // 添加删除功能
+            let as = document.querySelectorAll('a')
+            for (let i = 0; i < as.length; i++) {
+                as[i].onclick = function () {
+                    ul.removeChild(this.parentNode)
+                }
+            }
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>循环语句</title>
+    <script>
+        // 一.流程控制
+        // 1. 顺序语句
+        // 2. 分支语句
+
+        // ● 单分支语句
+        // if (条件表达式) {
+        //     // 代码段
+        // }
+
+        // ●
+        // 双分支语句
+        // if (条件表达式) {
+        //     // 代码段1
+        // } else {
+        //     // 代码段2
+        // }
+
+
+
+        // 三元运算符： 一种需要三个操作数的运算符， 运算的结果根据给定条件决定。
+        // 条件表达式 ? 表达式1 : 表达式2；
+        // 先求条件表达式的值， 如果为true， 则返回表达式1的执行结果； 如果条件表达式的值为false， 则返回表达式2的执行结果。
+
+        /*  var num = prompt('请输入年龄：');
+         var str = num >= 18 ? '欢迎光临！' : '请你回家！';
+         alert(str); */
+
+
+        // ●
+        // 多分支语句
+        // if (条件表达式1) { // 代码段1 } 
+        //     else if (条件表达式2) { // 代码段2 }
+        //         ...
+        //         else if (条件表达式n) { // 代码段n } else { // 代码段n+1  }
+
+
+
+
+        //             switch (表达式) {
+        //                 case 值1： 
+        //                 代码段1;
+        //                 break;
+        //                 case 值2： 
+        //                 代码段2;
+        //                 break;
+        //                 ...
+        //                 default:
+        //                     代码段n;
+        //             }
+
+
+
+        //            3. 循环语句
+        // for语句:是最常用的循环语句， 它适合循环次数已知的情况。
+        /* for (初始化变量; 条件表达式; 操作表达式) {
+            // 循环体
+        } */
+
+        // 案例：使用for语句输出1~100范围内的数字
+
+        /* for (var i = 1; i <= 100; i++) {
+            console.log(i);
+        } */
+
+
+        // 断点调试： F12 / Sources……
+        //“重复执行相同代码”
+
+        //案例：重要的事情说n遍
+        /* var num = prompt('请输入次数：');
+        for (var i = 1; i <= num; i++) {
+            console.log('重要的事情说' + num + '遍');
+        } */
+
+        //“重复执行不同代码”
+        //案例  不到/到100
+        /* for (var i = 1; i <= 100; i++) {
+            if (i < 100) {
+                console.log('不到100！');
+            } else {
+                console.log('到100了！');
+            }
+        } */
+
+        //1~100之间的所有整数“求和”和“平均数”
+        /* var sum = 0;
+        var average = 0;
+        for (var i = 1; i <= 100; i++) {
+            sum = sum + i;
+        }
+        average = sum / 100;
+        console.log('和为' + sum);
+        console.log('平均值为' + average); */
+
+        // 1~100之间的所有能被3整除的整数之和
+        /* var sum = 0;
+        for (var i = 1; i <= 100; i++) {
+            if (i % 3 == 0) {
+                sum += i;
+            }
+        }
+        console.log(sum); */
+
+
+        //自动生成字符串  打印一行小星星
+        /*   var str = '';
+          var num = prompt('请输入星星个数：')
+          for (var i = 1; i <= num; i++) {
+              str += '★';
+              // console.log('★');
+          }
+          console.log(str); */
+
+        //循环嵌套案例  打印多行多列的星星
+        /*  var str = '';
+         var rows = prompt('请输入行数：');
+         var cols = prompt('请输入列数：');
+         for (var i = 1; i <= rows; i++) {
+             for (var j = 1; j <= cols; j++) {
+                 str += '★';
+             }
+             str += '\n';
+         }
+         console.log(str); */
+
+        //生成倒三角形的星星图案
+        /*  var str = '';
+         for (var i = 1; i <= 5; i++) {
+             for (var j = 1; j <= 5 + 1 - i; j++) {
+                 str += '★';
+             }
+             str += '\n';
+         }
+         console.log(str); */
+
+
+        //九九乘法表
+        /*   var str = '';
+          for (var i = 1; i <= 9; i++) {
+              for (var j = 1; j <= i; j++) {
+                  str += j + '*' + i + '=' + i * j + '\t';
+              }
+              str += '\n';
+          }
+          console.log(str); */
+
+
+        //while语句:可以在条件表达式为true的前提下，循环执行指定的一段代码，直到条件表达式为false时结束循环。
+        /*  while (条件表达式) {
+             // 循环体
+         } */
+        //案例 “你到了吗？”
+        /*  var answer = prompt('你到了吗？');
+         while (answer != '到了') {
+             answer = prompt('你到了吗？')
+         }
+         alert('终于daole！'); */
+
+
+
+
+        //  do…while语句:会无条件地执行一次循环体中的代码，然后再判断条件，根据条件决定是否循环执行。
+        /*  do {
+             // 循环体
+         } while (条件表达式) */
+
+        //案例 “你到了吗？”
+        /*  var answer = '';
+         do {
+             answer = prompt('你到了吗？');
+         } while (answer != '到了');
+         alert('终于到了') */
+
+
+        //关键字continue 和 break
+
+        //continue关键字可以在for、while以及do…while循环体中使用，它用来立即跳出本次循环，也就是跳过了continue后面的代码，继续下一次循环。
+
+        //吃第三个苹果发现一只虫子 第三个不吃了 4 5个接着吃
+        /*  for (var i = 1; i <= 5; i++) {
+             if (i == 3) {
+                 continue;
+             }
+             console.log('正在吃第' + i + '只苹果！');
+         } */
+
+        //用在switch语句中，当遇到break语句时，跳出switch语句
+        // 循环语句中使用时，其作用是立即跳出整个循环（将循环结束）
+        // 注意：break语句还可跳转到指定的标签语句处，实现循环嵌套中的多层跳转
+
+        //吃第三个苹果发现半只虫子 从第三个开始后面都不吃了
+        for (var i = 1; i <= 5; i++) {
+            if (i == 3) {
+                break;
+            }
+            console.log('正在吃第' + i + '只苹果！');
+        }
+    </script>
+
+
+
+
+</head>
+
+<body>
+
+</body>
+
+</html>

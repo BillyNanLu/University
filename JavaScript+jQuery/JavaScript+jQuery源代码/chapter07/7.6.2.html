@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="t">test</div>
+    <script>
+      var DOM对象 = document.getElementById('t');
+      
+      DOM对象.onclick = null;                       // 传统方式删除事件
+      DOM对象.detachEvent(type, callback);			    // 早期版本IE浏览器
+      DOM对象.removeEventListener(type, callback);	// 标准浏览器
+    </script>
+  </body>
+</html>

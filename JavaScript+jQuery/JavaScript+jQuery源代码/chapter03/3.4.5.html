@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // 当左侧的变量数量小于右侧的元素个数
+      var arr = [1, 2, 3];
+      [a, b] = arr;
+      console.log(a + ' - ' + b);                // 输出结果：1 – 2
+      // 当左侧的变量数量大于右侧的元素个数
+      var arr1 = [5, 6];
+      [d, e, f] = arr1;
+      console.log(d + ' - ' + e + ' - ' + f);    // 输出结果：5 - 6 - undefined
+      // 两个变量数值的交换
+      var n1 = 4, n2 = 8;
+      [n1, n2] = [n2, n1];
+      console.log(n1 + ' - ' + n2);              // 输出结果：8 - 4
+    </script>
+  </body>
+</html>

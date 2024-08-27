@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- <div class="demo">
+        <div class="box"><span class="child">span元素</span></div>
+    </div>
+
+    <script>
+        // 获取父节点
+        let child = document.querySelector('.child')
+        console.log(child.parentNode)
+    </script> -->
+
+    <ul>
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+        <li>4</li>
+    </ul>
+
+    <script>
+        // 获取子节点
+        // 1.childNodes
+        let ul = document.querySelector('ul')
+        console.log(ul.childNodes)
+        console.log(ul.childNodes[0])
+        console.log(ul.childNodes[1])
+
+        // 2.children
+        console.log(ul.children)
+
+        // 3.firstChild 和 lastChild
+        console.log(ul.firstChild)
+        console.log(ul.lastChild)
+
+        // 4.firstElementChild 和 lastElementChild
+        console.log(ul.firstElementChild)
+        console.log(ul.lastElementChild)
+
+        // 获取兄弟节点
+        let li01 = document.querySelector('li')
+        console.log(li01.nextSibling)
+        console.log(li01.previousSibling)
+
+        // nextElementSibling
+        console.log(li01.nextElementSibling)
+        console.log(li01.previousElementSibling);
+    </script>
+</body>
+
+</html>

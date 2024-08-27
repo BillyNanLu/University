@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS执行机制</title>
+</head>
+
+<body>
+    <button>按钮</button>
+    <script>
+        //JavaScript语言的一大特点就是单线程，也就是说，同一个时间只能做一件事。
+        //  H5提出Web Worker标准，允许JS创建多线程，出现了同步和异步；
+        //同步：所谓同步，就是前一个任务结束后再执行后一个任务，程序的执行顺序与任务的排列顺序是一致的、同步的。
+        // 同步任务都是在主线程上执行，形成一个执行栈
+
+        // 异步：所谓异步，就是在做一件事件的同时，可以去处理其他的事情。
+        //异步是通过回调函数实现的，主要包括：
+        //普通事件，如click、resize……
+        //资源加载,如load……
+        //定时器，setTimeout、setInterval……
+
+        //异步任务的回调函数会添加到任务队列中，待主线程上的同步任务执行完毕再执行
+        console.log(1);
+        setTimeout(function() {
+            console.log(2);
+        }, 2000);
+        console.log(3);
+        var btn = document.querySelector('button');
+        btn.onclick = function() {
+                console.log(4);
+            }
+            //
+    </script>
+</body>
+
+</html>

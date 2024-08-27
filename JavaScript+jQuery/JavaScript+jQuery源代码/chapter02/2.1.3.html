@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      var age = 18;	      	// 整数
+      var pi = 3.14;	    	// 浮点数（小数）
+
+      var num1 = 07;
+      console.log(num1);	  // 输出结果：7
+      var num2 = 010;
+      console.log(num2);    // 输出结果：8
+
+      var num1 = 0x9;
+      console.log(num1);	  // 输出结果：9
+      var num2 = 0xa;
+      console.log(num2);	  // 输出结果：10
+
+      console.log(Number.MAX_VALUE);	      // 输出结果：1.7976931348623157e+308
+      console.log(Number.MIN_VALUE);	      // 输出结果：5e-324
+      
+      console.log(Number.MAX_VALUE * 2);		// 输出结果：Infinity
+      console.log(-Number.MAX_VALUE * 2);		// 输出结果：-Infinity
+      console.log('abc' - 100);			      	// 输出结果：NaN
+
+      console.log(isNaN(12));				      	// 输出结果：false
+      console.log(isNaN('abc'));			    	// 输出结果：true
+    </script>
+  </body>
+</html>

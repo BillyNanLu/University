@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      var reg = /[abc]/;
+      console.log(reg.test('andy'));   // 结果为：true
+      console.log(reg.test('baby'));   // 结果为：true
+      console.log(reg.test('color'));  // 结果为：true
+      console.log(reg.test('red'));    // 结果为：flase
+      var rg = /^[abc]$/;
+      console.log(rg.test('a'));       // 结果为：true
+      console.log(rg.test('aa'));      // 结果为：false
+      console.log(rg.test('b'));       // 结果为：true
+      console.log(rg.test('c'));       // 结果为：true
+      console.log(rg.test('abc'));     // 结果为：flase
+
+      var rg = /^[a-z]$/;
+      console.log(rg.test('a'));       // 结果为：true
+      console.log(rg.test('z'));       // 结果为：true
+
+      var rg =  /^[a-zA-Z0-9_-]$/; 
+    </script>
+  </body>
+</html>

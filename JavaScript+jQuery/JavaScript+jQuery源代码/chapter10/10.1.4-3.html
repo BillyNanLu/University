@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script src="jquery-3.3.1.min.js"></script>
+  </head>
+  <body>
+    <div></div>
+    <script>
+      // DOM对象
+      var myDiv = document.querySelector('div');
+      myDiv.hide();			          // 错误写法
+      // jQuery对象
+      var div = $("div");
+      div.style.display = "none";	// 错误写法
+    </script>
+  </body>
+</html>

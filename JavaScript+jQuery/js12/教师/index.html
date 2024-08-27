@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>主页</title>
+</head>
+
+<body>
+    <div></div>
+    <script>
+        // console.log(location.search);  ?uname=Jack
+        //1.去除？
+        var usearch = location.search.substr(1);
+        console.log(usearch);
+        //2.讲字符串=两边 转变为数组
+        var arr = usearch.split('=');
+        console.log(arr); //['uname', 'Jack']
+        var div = document.querySelector('div');
+        // 3.把用户名写入div
+        div.innerHTML = arr[1] + ',欢迎您！';
+    </script>
+</body>
+
+</html>

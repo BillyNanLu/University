@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Location常用方法</title>
+</head>
+
+<body>
+
+    <button>按钮</button>
+    <script>
+        var btn = document.querySelector('button');
+        btn.onclick = function() {
+            //assign()  载入一个新的文档  记录了浏览历史，可以实现后退
+
+
+            // location.assign('http://www.baidu.com')
+
+            //replace() 用新的文档替换当前文档，覆盖浏览器当前记录
+            //不记录浏览历史 不能后退
+
+            // location.replace('http://www.baidu.com')
+            //reload()  重新加载当前文档
+
+            //reload() 重新加载当前文档 相当于F5 参数为true 为强制刷新 相当于ctrl+F5；
+            location.reload(true);
+
+
+
+
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+
+      .father {
+        width: 80px;
+        height: 80px;
+        background-color: pink;
+        margin: 10px;
+        overflow: hidden;
+        position: relative;
+      }
+
+      .son {
+        width: 25px;
+        height: 25px;
+        background-color: purple;
+        position: absolute;
+        left: 10px;
+        top: 10px;
+      }
+    </style>
+    <script src="jquery-3.3.1.min.js"></script>
+  </head>
+  <body>
+    <div class="father">
+      <div class="son"></div>
+    </div>
+    <script>
+      console.log($(".son").position().top);		// 获取距离顶部的位置
+      console.log($(".son").position().left);	  // 获取距离左侧的位置
+    </script>
+  </body>
+</html>

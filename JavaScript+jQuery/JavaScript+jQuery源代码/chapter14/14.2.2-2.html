@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      var str = '^abc\\1.23*edf$';
+      var reg = /\.|\$|\*|\^|\\/gi;
+      console.log(str.match(reg));		// 匹配结果：(5) ["^", "\", ".", "*", "$"]
+    </script>
+  </body>
+</html>

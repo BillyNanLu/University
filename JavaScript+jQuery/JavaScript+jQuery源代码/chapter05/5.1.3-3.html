@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      var stu2 = {};						          // 创建一个空对象
+      stu2.name = 'Jack';				         	// 为对象增加name属性
+      stu2.introduce = function () {		  // 为对象增加introduce方法
+        alert('My name is ' + this.name);	// 在方法中使用this代表当前对象
+      };
+      alert(stu2.name);		// 访问name属性，输出结果：Jack
+      stu2.introduce();		// 调用introduce()方法，输出结果：My name is Jack
+    </script>
+  </body>
+</html>

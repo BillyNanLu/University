@@ -1,0 +1,20 @@
+ht
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      var date = new Date();	 		       	// 基于当前日期时间创建Date对象
+      var year = date.getFullYear();		  // 获取年
+      var month = date.getMonth();      	// 获取月
+      var day = date.getDate();         	// 获取日
+      // 通过数组将星期值转换为字符串
+      var week = ['星期日', '星期一', '星期二', '星期三', '星期四', '星期五', '星期六'];
+      // 输出date对象保存的时间，示例：今天是2019年9月16日 星期三
+      console.log('今天是' + year + '年' + month + '月' + day + '日 ' + week[date.getDay()]);
+    </script>
+  </body>
+</html>

@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      var arr = [2, 0, 6, 1, 77, 0, 52, 0, 25, 7];
+      var newArr = [];
+      var j = 0;
+      for (var i = 0; i < arr.length; i++) {
+        if (arr[i] >= 10) {
+          newArr[j++] = arr[i];    // 新数组索引号从0开始，依次递增
+        }
+      }
+      console.log(newArr);	     	// 输出结果：(3) [77, 52, 25]
+    </script>
+  </body>
+</html>

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script src="jquery-3.3.1.min.js"></script>
+  </head>
+  <body>
+    <div class="one"></div>
+    <div class="two"></div>
+    <script>
+      // 使用className操作类名
+      var one = document.querySelector('.one');
+      one.className = 'one';
+      one.className = 'two';			    // 此时元素将失去one类名
+      // 使用jQuery操作类名
+      $('.two').addClass('one');		  // 此时元素同时拥有one和two类名
+      $('.two').removeClass('two'); 	// 此时元素的two类名被移除
+    </script>
+  </body>
+</html>

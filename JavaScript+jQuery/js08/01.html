@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM</title>
+    <script>
+        /* document.title = 'DOM(上)'
+        console.log(document.title)
+        document.write('<h1>网页开发</h1>') */
+    </script>
+</head>
+
+<body>
+    <!-- <div id="box">盒子</div> -->
+    
+    <ul>
+        <li>北京</li>
+        <li>上海</li>
+        <li>广州</li>
+        <li>深圳</li>
+    </ul>
+    <ol id="rank">
+        <li>第一名</li>
+        <li>第二名</li>
+        <li>第三名</li>
+        <li>第四名</li>
+    </ol>
+
+    <label for="">运动<input type="checkbox" name="hobby" value="sports"></label>
+    <label for="">唱歌<input type="checkbox" name="hobby" value="sing"></label>
+    <label for="">跳舞<input type="checkbox" name="hobby" value="dance"></label>
+
+    <div class="box1">盒子1</div>
+    <div class="box2">盒子2</div>
+
+    <div class="box">盒子1</div>
+    <div class="box">盒子2</div>
+    <div id="nav">
+        <ul>
+            <li>首页</li>
+            <li>产品</li>
+        </ul>
+    </div>
+
+    <img src="./images/close.png" alt="">
+    <img src="./images/flower.png" alt="">
+
+    <script>
+        // 获取元素
+        // 1.id获取元素
+        /* let box = document.getElementById('box')
+        console.log(box) */
+
+        // 2.标签名
+        /* // 通过documet对象获取元素
+        let lis = document.getElementsByTagName('li')
+        console.log(lis)
+        console.log(Array.isArray(lis))  // false 不是真正的数组 是伪数组
+        console.log(lis[0])
+        console.log(lis[0].innerText)
+        // 通过element对象获取元素
+        let ol = document.getElementById('rank')
+        let lisOl = ol.getElementsByTagName('li')
+        console.log(lisOl) */
+
+        // 3.name获取元素
+        /* let inputs = document.getElementsByName('hobby')
+        inputs[1].checked = true */
+
+        // 4.getElementsByClassName()
+        /* let boxs = document.getElementsByClassName('box1')
+        console.log(boxs)  // 返回一个伪数组
+        console.log(boxs[0]); */
+
+        // 5.document.querySelector()  document.querySelectorAll()
+        /* let box = document.querySelector('div')  // 获取第一个盒子的盒子1
+        console.log(box)
+        let box2 = document.querySelector('#nav')  // id名前必须加井号
+        console.log(box2)
+        let boxs = document.querySelectorAll('.div')  // 返回该类元素的集合
+        console.log(boxs)
+        box2.style.width = '200px'
+        box2.style.hight = '60px'
+        box2.style.background = 'red' */
+
+        // 获取特殊元素 document对象的属性
+        
+        console.log(document.body)  // 获取文档的body元素
+        console.log(document.documentElement)  // 获取文档的html元素
+        console.log(document.title)
+        console.log(document.images);  // 返回文档中所有图片的集合
+        console.log(document.forms)  // 返回表单中所有表单的集合
+    </script>
+
+</body>
+
+</html>

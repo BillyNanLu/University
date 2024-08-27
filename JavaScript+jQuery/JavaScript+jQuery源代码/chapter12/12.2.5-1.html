@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      class Father {
+        constructor(x, y) {
+          this.x = x;
+          this.y = y;
+        }
+        sum() {
+          console.log(this.x + this.y);
+        }
+      }
+      class Son extends Father {
+        constructor(x, y) {
+          super(x, y);		// 调用父类的构造方法
+        }
+      }
+      var son = new Son(1, 2);
+      son.sum();			    // 输出结果：3
+    </script>
+  </body>
+</html>

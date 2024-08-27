@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      var num;			    // num的变量声明由于预解析而提升到前面
+      console.log(num);	// 输出结果：undefined
+      num = 10;
+    </script>
+  </body>
+</html>

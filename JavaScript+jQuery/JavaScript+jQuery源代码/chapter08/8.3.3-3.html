@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      var o = {
+        sayHi: function () {
+          console.log(this);
+        }
+      };
+      o.sayHi();	// sayHi中的this指向的就是o这个对象
+    </script>
+  </body>
+</html>

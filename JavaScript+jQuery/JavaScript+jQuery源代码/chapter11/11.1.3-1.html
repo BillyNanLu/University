@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script src="jquery-3.3.1.min.js"></script>
+  </head>
+  <body>
+    <div>我是div</div>
+    <script>
+      $("div").data("uname", "andy");       // 设置数据
+      console.log($("div").data("uname"));  // 获取数据，输出结果：andy
+    </script>
+  </body>
+</html>

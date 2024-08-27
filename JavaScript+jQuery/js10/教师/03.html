@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>事件进阶</title>
+</head>
+
+<body>
+    <!-- <button>按钮</button>
+    <script>
+        var btn = document.querySelector('button');
+        //注册事件
+        //传统方式  一个对象只能实现一个事件的绑定
+        // btn.onclick = function() {
+        //     alert('111');
+        // }
+        // btn.onclick = function() {
+        //         alert('222');
+        //         this.onclick = null; //传统事件的移除
+        //     }
+        //事件监听方式 可以给同一个DOM对象的同一个事件添加多个事件处理程序。
+        //DOM对象.attachEvent(type, callback); //早期IE6 7 8
+        //DOM对象.addEventListener(type, callback, [capture]);重点记这个
+        // btn.addEventListener('click', function() {
+        //     alert('111'); //事件类型type 前面on去掉
+        // })
+        btn.addEventListener('click', fn)
+
+        function fn() {
+            alert('222');
+            btn.removeEventListener('click', fn)
+
+        }
+
+
+        //事件删除
+        // DOM对象.onclick = null; // 传统方式删除事件
+        // DOM对象.detachEvent(type, callback); // 早期版本IE浏览器
+        // DOM对象.removeEventListener(type, callback); // 标准浏览器
+    </script> -->
+
+
+    <!-- dom事件流 -->
+    <!-- <div class="father" style="width: 200px;height: 200px;background-color:yellow">
+        <div class="son" style="width: 100px;height: 100px;background-color: red;"></div>
+    </div>
+    <script>
+        //JS只能执行捕获或者冒泡其中的一个阶段
+        //onclick和attachEvent只能得到冒泡阶段
+        //addEventListener(type,callback,[capture] ) [capture]缺省或false为捕获，值为true为冒泡
+        var father = document.querySelector('.father');
+        var son = document.querySelector('.son');
+        father.addEventListener('click', function(e) {
+            alert('son');
+            e.stopPropagation(); //阻止事件冒泡
+        }, true)
+        son.addEventListener('click', function() {
+            alert('father');
+        }, true)
+    </script> -->
+
+
+    <!-- 事件对象 -->
+    <!-- <button>按钮</button>
+    <script>
+        var btn = document.querySelector('button');
+        btn.onclick = function(e) {
+            //当一个事件发生后，跟事件相关的一系列信息数据的集合都放到这个对象里面，这个对象就是event。只有有了事件event才会存在，它是系统自动创建的，不需要传递参数。
+            //也常用e
+            //IE 6~IE 8 window.event
+            // console.log(e);
+
+            //事件对象的常见属性和方法
+            // console.log(e.type); //事件类型
+            console.log(e.target); //触发事件的对象
+            console.log(this); //此处跟e.target一样
+        }
+    </script>
+
+    <a href="http://www.baidu.com">百度</a>
+    <script>
+        var a = document.querySelector('a');
+        a.addEventListener('click', function(e) {
+            e.preventDefault(); //阻止默认事件
+        })
+    </script> -->
+
+
+    <ul>
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+    </ul>
+    <script>
+        var ul = document.querySelector('ul');
+        ul.addEventListener('click', function(e) {
+            //e.target和this的区别
+
+            //e.target返回的是触发事件的对象，而this返回的是绑定事件的对象。
+
+            // console.log(this);
+            // console.log(e.target);
+            //事件委托 不给子元素注册事件，给父元素注册事件，让处理代码在父元素的事件中执行。
+            e.target.style.backgroundColor = '#ccc';
+
+        })
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>01.html</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .father {
+            /* 返回son像对于father的偏移量，father盒子必须设置定位 */
+            position: relative;
+            width: 200px;
+            height: 200px;
+            background-color: red;
+            padding: 50px;
+            margin: 20px;
+            border: 30px solid black;
+        }
+
+        .son {
+            width: 100px;
+            height: 100px;
+            background-color: yellow;
+        }
+
+        .box {
+            width: 100px;
+            height: 100px;
+            background-color: purple;
+            margin: 20px;
+            padding: 30px;
+        }
+    </style>
+</head>
+<body>
+    <div class="father">
+        <div class="son"></div>
+    </div>
+
+    <div class="box" style="width: 300px"></div>
+
+    <script>
+        let father = document.querySelector('.father')
+        let son = document.querySelector('.son')
+        console.log(father.offsetLeft)
+        console.log(father.offsetTop)
+        console.log(father.offsetWidth)
+        console.log(father.offsetHeight)
+        console.log(son.offsetLeft)
+        console.log(son.offsetTop)
+        console.log(son.offsetParent)
+        console.log(son.parentNode)
+
+
+        let box = document.querySelector('.box')
+        console.log(box.offsetWidth)
+        console.log(box.style.width)
+        box.offsetWidth = 500  //  赋值无效
+        box.style.width = '500px'
+    </script>
+</body>
+</html>

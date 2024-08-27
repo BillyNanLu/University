@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      var arr = [];
+      var obj = {};
+      // 第1种方式
+      console.log(arr instanceof Array);		// 输出结果：true
+      console.log(obj instanceof Array);		// 输出结果：false
+      // 第2种方式
+      console.log(Array.isArray(arr));	  	// 输出结果：true
+      console.log(Array.isArray(obj));	  	// 输出结果：false
+    </script>
+  </body>
+</html>

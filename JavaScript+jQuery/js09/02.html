@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>属性操作</title>
+</head>
+
+<body>
+    <div id="demo" class="box1" index="1"></div>
+
+    <script>
+        // 获取属性值
+        // element.属性
+        let div = document.querySelector('div')
+        console.log(div.id);
+        console.log(div.className);  // 此处属性名应该为className 而不是 class
+        console.log(div.index);  // undefined 对于自定义属性 此法不适用
+        // getAttribute('属性')  可以获取自定义属性和默认属性值
+        console.log(div.getAttribute('index'));
+        console.log(div.getAttribute('class'));  // 此处属性名为class
+
+
+        // 设置属性值
+        // element.属性 = '值'
+        div.id = 'box'
+        div.className = 'bgbox'
+        div.index = 111  // 对自定义属性无效
+        // setAttribute('属性', '值')  对默认属性及自定义属性有效
+        div.setAttribute('index', 111)
+        div.setAttribute('class', 'boxbg')
+
+
+        // 移除属性
+        // removeAttribute('属性')
+        div.removeAttribute('index')
+
+
+        // 自定义属性
+        div.setAttribute('data-index', '11')
+        div.setAttribute('data-list-name', 'listone')
+
+        // 获取自定义属性值
+        console.log(div.getAttribute('data-index'))
+        console.log(div.getAttribute('data-list-name'))
+
+        // dataset属性
+        // console.log(div.dataset.index)
+        console.log(div.dataset.listName)
+        console.log(div.dataset['index'])
+        console.log(div.dataset['listName'])
+    </script>
+</body>
+
+</html>

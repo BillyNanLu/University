@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      var even = 0;
+      var odd = 0;
+      for (var i = 1; i <= 100; i++) {
+        if (i % 2 == 0) {								// 判断i是奇数还是偶数
+          even += i;
+        } else {
+          odd += i;
+        }
+      }
+      console.log('1~100之间所有的偶数和是' + even);	// 计算结果：2550
+      console.log('1~100之间所有的奇数和是' + odd);		// 计算结果：2500
+    </script>
+  </body>
+</html>

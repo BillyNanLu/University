@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jQuery中的内容操作方法</title>
+    <script src="js/jquery-3.2.1.min.js"></script>
+    <script>
+        $(function() {
+            // 1. html()
+            // console.log($('div').html())
+            // $('span').html('<a href="#">百度</a>')
+
+            // 2. text()
+            console.log($('div').text());
+            $('div').text('<span>abc</span>')
+
+            // 3. val()
+            console.log($('input').val())
+            $('input').val('已输入完毕')
+        })
+    </script>
+</head>
+
+<body>
+    <div>
+        <span>我是内容</span>
+    </div>
+    <input type="text" name="" id="" value="请输入内容">
+</body>
+
+</html>

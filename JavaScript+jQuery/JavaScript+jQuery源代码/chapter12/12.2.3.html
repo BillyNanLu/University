@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      class Person {
+        constructor(name) {	  // 构造方法
+          this.name = name;
+        }
+        say() {				        // 在类中定义一个say()方法
+          console.log('你好，我叫' + this.name);
+        }
+      }
+      var p1 = new Person('张三');
+      p1.say();				        // 输出结果：你好，我叫张三
+    </script>
+  </body>
+</html>

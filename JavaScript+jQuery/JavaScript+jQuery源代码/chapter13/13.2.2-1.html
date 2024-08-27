@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      function Person() { }
+      // 通过原型对象访问构造函数
+      console.log(Person.prototype.constructor === Person); // 输出结果：true
+      // 通过实例对象访问构造函数
+      var p1 = new Person();
+      console.log(p1.constructor === Person);               // 输出结果：true
+    </script>
+  </body>
+</html>

@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script src="jquery-3.3.1.min.js"></script>
+  </head>
+  <body>
+    <ul>
+      <li>我是第1个li</li>
+      <li>我是第2个li</li>
+    </ul>
+    <script>
+      $("ul").on("click", "li:first-child", function () {
+        alert("单击了li");	// 单击第1个li会触发此事件
+      });
+    </script>
+  </body>
+</html>

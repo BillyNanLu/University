@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM(下)</title>
+</head>
+
+<body>
+    <script>
+        //键盘事件
+
+        //keyup 某个键盘按键被松开时触发
+        document.onkeyup = function(e) {
+                console.log('我弹起了up');
+                console.log(e.keyCode);
+            }
+            // keydown  某个键盘按键被按下时触发
+
+        document.onkeydown = function(e) {
+                console.log('我按下了down');
+                console.log(e.keyCode);
+            }
+            // keypress 某个键盘按键被按下时触发，不识别功能键，如Ctrl、Shift、箭头等
+
+
+        document.onkeypress = function(e) {
+            console.log('我按下了press');
+            console.log(e.keyCode);
+        }
+
+
+        //三个事件触发顺序 keydown-keypress-keyup
+        //keyup和keydown事件不区分字母大小写,keypress区分字母大小写。
+    </script>
+</body>
+
+</html>

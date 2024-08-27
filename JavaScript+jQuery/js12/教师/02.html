@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>window顶级对象</title>
+    <script>
+        // window.onload = function() {
+        //     var div = document.querySelector('div');
+        //     div.style.width = '200px';
+        //     div.style.height = '200px';
+        //     div.style.backgroundColor = 'red';
+        // }
+        // window.onload = function() {
+        //         var div = document.querySelector('div');
+        //         div.innerHTML = '我加载好了';
+        //     }
+        // window.addEventListener('load', function() {
+        //     var div = document.querySelector('div');
+        //     div.style.width = '200px';
+        //     div.style.height = '200px';
+        //     div.style.backgroundColor = 'red';
+        // })
+        // window.addEventListener('load', function() {
+        //     var div = document.querySelector('div');
+        //     div.innerHTML = '我加载好了';
+        // })
+
+        window.addEventListener('load', function() {
+                alert('load');
+            })
+            //会在DOM加载完成时触发，这里所说的加载不包括CSS样式表、图片和flash动画等额外内容的加载。
+
+        window.addEventListener('DOMContentLoaded', function() {
+            alert('DOMContentLoaded')
+        })
+    </script>
+</head>
+
+<body>
+
+    <div>盒子</div>
+
+
+    <script>
+        //很多方法属性前 省略了window
+        // window.document.querySelector();
+        // var num = 10;
+        // console.log(window.num);
+        // function fn() {
+        //     console.log(10);
+        // }
+        // window.fn();
+    </script>
+
+</body>
+
+</html>

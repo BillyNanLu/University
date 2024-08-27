@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>函数进阶</title>
+    <script>
+        // 函数的两种声明方式
+        // 1.利用函数关键字自定义函数（命名函数）
+        /* function fn() {
+            //函数体
+        }
+        fn(); */
+        //2.函数表达式（匿名函数）
+        // 是将声明的函数赋值给一个变量，通过变量完成函数的调用和参数的传递。
+        // 函数表达式的定义必须在调用前。
+        /*   var sum = function fn(num1, num2) {
+              return num1 + num2;
+          }
+          console.log(sum(1, 2)); */
+        //sum是变量名 不是函数
+        //函数表达式的声明跟变量声明差不多 只不过 变量名里存的是值 而函数表达式里存的是函数
+        //函数表达式也可以进行参数的传递
+
+        //回调函数
+        //指的就是一个函数A作为参数传递给一个函数B，然后在B的函数体内调用函数A。此时，称函数A为回调函数。
+        /*  function cal(num1, num2, fn) {
+             return fn(num1, num2);
+         }
+         console.log(cal(10, 20, function(a, b) {
+             return a + b;
+         }));
+         console.log(cal(10, 20, function(a, b) {
+             return a * b;
+         })); */
+
+        //递归调用:指的是一个函数在其函数体内调用自身的过程，这种函数称为递归函数。
+        //根据用户的输入计算指定数据的阶乘
+        //5!=5*4*3*2*1
+        //n!=n*(n-1)*(n-2)*...3*2*1=n*(n-1)!=n*(n-1)*(n-2)!
+        /*   function factorial(n) {
+              if (n == 1) {
+                  return 1;
+              }
+              return n * factorial(n - 1)
+          }
+          var n = prompt('请输入n的值：');
+          n = parseInt(n);
+          if (isNaN(n)) {
+              console.log('请输入合法的n的值');
+          }
+          console.log(n + '的阶乘是：' + factorial(n)); */
+
+
+        //作用域
+        //变量需要在它的作用范围内才可以被使用，这个作用范围称为变量的作用域
+        // var num = 10; //此处num为全局变量
+        // console.log(num);
+
+
+        // function fn() {
+        //     var num1 = 20; //此处num1为局部变量
+        //     num2 = 30; //此处num2前没有var  也是全局变量！！！
+        //     console.log(num1);
+        // }
+
+        // fn();
+        // // console.log(num1); //num1在函数外部无效
+        // console.log(num2);
+
+        //ES6之前  js变量只有全局变量跟局部变量  没有块级变量
+        //全局变量：不在任何函数内声明的变量（显式定义）或在函数内省略var声明的变量（隐式定义）都称为全局变量
+        //局部变量：在函数体内利用var关键字定义的变量称为局部变量
+        //全局变量和局部变量的区别
+        //全局变量在浏览器关闭页面的时候才会销毁，比较占用内存资源
+        //局部变量在函数执行完成后就会销毁，比较节约内存资源
+
+
+        //作用域链：当在一个函数内部声明另一个函数时，内层函数只能在外层函数作用域内执行，在内层函数执行的过程中，若需要引入某个变量，首先会在当前作用域中寻找，若未找到，则继续向上一层级的作用域中寻找，直到全局作用域，称这种链式的查询关系为作用域链。(链式查找)
+
+        /* var num = 10;
+
+        function fn() {
+            var num = 20;
+
+            function fun() {
+                console.log(num);
+            }
+            fun()
+        }
+        fn(); */
+
+        // function f1() {
+        //     // var num = 123;
+
+        //     function f2() {
+        //         console.log(num);
+        //     }
+        //     f2();
+        // }
+        // var num = 456;
+        // f1();
+
+        /*  var a = 1;
+
+         function fn1() {
+             var a = 2;
+             var b = 22;
+             fn2();
+
+             function fn2() {
+                 var a = 3;
+                 fn3();
+
+                 function fn3() {
+                     var a = 4;
+                     console.log(a);
+                     console.log(b);
+                 }
+             }
+         }
+         fn1(); */
+
+        //闭包函数
+        // 所谓“闭包”指的就是有权访问另一函数作用域内变量（局部变量）的函数。主要的两点用途如下：
+        // 可以在函数外部读取函数内部的变量
+        // 可以让变量的值始终保持在内存中
+        // 注意：由于闭包会使得函数中的变量一直被保存在内存中，内存消耗很大，所以闭包的滥用可能会降低程序的处理速度，造成内存消耗等问题。
+        /*   function fn() {
+              var times = 0;
+              var c = function() {
+                  return ++times;
+              }
+              return c;
+          }
+          var count = fn();
+          console.log(count());
+          console.log(count()); */
+
+
+        //预解析
+        // console.log(num);
+        // var num = 10;
+        //相当于
+        // var num;
+        // console.log(num); //undefined
+        // num = 10;
+
+        // fn();
+
+        /* function fn() {
+            console.log('111');
+        } */
+        //相当于
+        /* function fn() {
+            console.log('111');
+        }
+        fn(); */
+
+
+        //函数表达式的定义必须在调用前。
+        // fn();
+        // var fn = function() {
+        //     console.log(222);
+        // }
+
+        // //相当于
+
+        // var fn;
+        // fn(); //报错
+        // fn = function() {
+        //     console.log(222);
+        // }
+
+        /*  var num = 10;
+         fun();
+
+         function fun() {
+             console.log(num);
+             var num = 20;
+         } */
+
+        //相当于
+        // var num;
+
+        // function fun() {
+        //     var num;
+        //     console.log(num);
+        //     num = 20;
+        // }
+        // num = 10;
+        // fun();
+
+
+        /* 
+                var a = 111;
+                f1();
+
+                function f1() {
+                    var b = 999;
+                    console.log(a);
+                    console.log(b);
+                    var a = 333;
+
+                }
+         */
+        //相当于
+
+        // var a;
+
+        // function f1() {
+        //     var b;
+        //     var a;
+        //     b = 999;
+        //     console.log(a);
+        //     console.log(b);
+        //     a = 333;
+
+        // }
+        // a = 111;
+        // f1();
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

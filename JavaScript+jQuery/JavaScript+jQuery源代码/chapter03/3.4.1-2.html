@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      var arr1 = [1, 2];
+      arr1.length = 4; 	    	// 大于原有长度
+      console.log(arr1); 		  // 输出结果：(4) [1, 2, empty × 2]
+      var arr2 = [1, 2, 3, 4];
+      arr2.length = 2;		  	// 小于原有长度 
+      console.log(arr2);     	// 输出结果：(2) [1, 2]
+    </script>
+  </body>
+</html>

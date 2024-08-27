@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      function Fun() {
+        console.log(this);
+      }
+      var fun = new Fun();	// Fun中的this指向的是新创建的实例，即fun
+    </script>
+  </body>
+</html>

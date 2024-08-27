@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>节点操作</title>
+</head>
+
+<body>
+    <button>按钮</button>
+    <div></div>
+    <ul>
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+    </ul>
+
+<!--     <script>
+        // 创建节点
+        // document.write()
+        // document.write('<p>你好!</p>')
+        let button = document.querySelector('button')
+        // button.onclick = function () {
+        //     document.write('<p>你好!</p>')
+        // }
+
+        // element.innerHTML 不会覆盖页面
+        /* let div = document.querySelector('div')
+        button.onclick = function () {
+            div.innerHTML = '<p>你好!</p>'
+        } */
+
+        // document.createElement
+        let ul = document.querySelector('ul')
+        let li = document.createElement('li')
+        // 添加节点
+        // 1.appendChild() 添加到制定父节点的子节点的末尾
+        ul.appendChild(li)
+        // 2.insertBefore(child, 指定元素) 添加到制定父节点指定子节点的前面
+        ul.insertBefore(li, ul.children[0])
+
+        // 删除节点 removeChild(child)
+        ul.removeChild(ul.children[0])
+    </script> -->
+
+    <script>
+        // 复制节点 node.cloneNode()
+        let ul = document.querySelector('ul')
+        let li = document.querySelector('li')
+        let newli = li.cloneNode(true)
+        ul.insertBefore(newli, ul.children[0])
+    </script>
+</body>
+
+</html>

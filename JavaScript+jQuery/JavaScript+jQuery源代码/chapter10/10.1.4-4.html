@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+      div {
+        width: 200px;
+        height: 200px;
+        background-color: pink;
+      }
+    </style>
+    <script src="jquery-3.3.1.min.js"></script>
+  </head>
+  <body>
+    <div></div>
+    <script>
+      // 从jQuery对象中取出DOM对象
+      console.log($("div")[0]);			  // 方式1
+      console.log($("div").get(0));		// 方式2
+      // 取出DOM对象后就可以用DOM方式操作元素
+      $("div")[0].style.display = "none";
+    </script>
+  </body>
+</html>

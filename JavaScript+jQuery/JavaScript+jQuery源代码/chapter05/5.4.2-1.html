@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // 方式1：通过日期对象的valueof()或getTime()方法。
+      var date1 = new Date();
+      console.log(date1.valueOf());	// 示例结果：1571196996188
+      console.log(date1.getTime());	// 示例结果：1571196996188
+      // 方式2：使用“+”运算符转换为数值型
+      var date2 = +new Date();
+      console.log(date2);			    	// 示例结果：1571196996190
+      // 方式3：使用HTML5新增的Date.now()方法
+      console.log(Date.now());	  	// 示例结果：1571196996190
+    </script>
+  </body>
+</html>

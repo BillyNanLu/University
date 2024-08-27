@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      console.log(this);     // this指向的是window
+      function fn() {
+        console.log(this);
+      }
+      window.fn();           // this指向的是window
+    </script>
+  </body>
+</html>

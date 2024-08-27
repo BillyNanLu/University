@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>遍历元素 </title>
+    <script src="./js/jQuery-3.6.4.min.js"></script>
+    <style>
+        div {
+            width: 200px;
+            height: 200px;
+            border: 1px solid black;
+            margin: 10px;
+        }
+    </style>
+    <script>
+        $(function() {
+            //1.$(selector).each(function(index, domEle) {});  //两参数也常用i  ele
+            arr = ['red', 'yellow', 'blue'];
+            $('div').each(function(index, domEle) {
+                    // console.log(index); //每个元素的索引
+                    // console.log(domEle); //每个dom元素对象 想对其使用jQuery方法 需要先转换为$(domEle)
+                    $(domEle).css('backgroundColor', arr[index])
+                })
+                //2.$.each(Object, function(i, ele) {});
+                //用此方法便利数组
+                // $.each(arr, function(i, ele) {
+                //     console.log(i);      //数组的索引
+                //     console.log(ele);     //数组的元素
+                // })
+
+            //用此方法便利对象
+            var obj = {
+                name: 'andy',
+                age: 10
+            }
+            $.each(obj, function(i, ele) {
+                console.log(i); //对象中每个属性的名
+                console.log(ele); //对象中每个属性的值
+            })
+        })
+    </script>
+</head>
+
+<body>
+    <div>1</div>
+    <div>2</div>
+    <div>3</div>
+</body>
+
+</html>

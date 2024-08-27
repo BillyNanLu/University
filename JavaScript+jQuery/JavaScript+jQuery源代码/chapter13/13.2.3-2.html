@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      function Person() { }
+      console.log(Person.prototype.__proto__ === Object.prototype); // true
+      var obj = {};
+      console.log(obj.__proto__ === Object.prototype);              // true
+      console.log(Object.prototype.__proto__);                      // 输出结果：null
+    </script>
+  </body>
+</html>

@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM</title>
+    <!-- <script>
+        document.title = 'DOM(上)';
+        console.log(document.title);
+        document.write('<h1>网页开发</h1>')
+    </script> -->
+
+
+</head>
+
+<body>
+    <!-- 1.获取元素 -->
+
+    <!-- 根据id获取元素 -->
+    <!-- document.getElementById('id') 是由document对象提供的用于查找元素的方法，该方法返回的是拥有指定id的元素，如果没有找到指定id的元素则返回null，如果存在多个指定id的元素则返回undefined。 -->
+
+    <!-- <div id="box">盒子</div>
+    <script>
+        var box = document.getElementById('box');
+        console.log(box);
+    </script> -->
+
+    <!-- 根据标签获取元素 两种方式：可以通过document对象获取元素和通过element对象获取元素。
+    document.getElementsByTagName('标签名');
+    element.getElementsByTagName('标签名');
+     -->
+    <!-- <ul>
+        <li>北京</li>
+        <li>上海</li>
+        <li>广州</li>
+        <li>深圳</li>
+    </ul>
+    <ol id='rank'>
+        <li>第一名</li>
+        <li>第二名</li>
+        <li>第三名</li>
+        <li>第四名</li>
+    </ol>
+    <script>
+        // 可以通过document对象获取元素
+        var lis = document.getElementsByTagName('li');
+        console.log(lis);
+        console.log(Array.isArray(lis)); //不是真正意义的数组 而是伪数组
+        console.log(lis[0]);
+        console.log(lis[0].innerText);
+        // 通过element对象获取元素
+        var ol = document.getElementById('rank');
+        var lisOl = ol.getElementsByTagName('li');
+        console.log(lisOl);
+
+        // getElementsByTagName()方法获取到的集合是动态集合
+    </script> -->
+
+
+    <!-- 根据name获取元素 -->
+    <!-- 是通过name属性来获取元素，一般用于获取表单元素。name属性的值不要求必须是唯一的，多个元素也可以有同样的名字，如表单中的单选框和复选框。 -->
+    <!-- <label for="">运动<input type="checkbox" name="hobby" value="sports"></label>
+    <label for="">唱歌<input type="checkbox" name="hobby" value="sing"></label>
+    <label for="">跳舞<input type="checkbox" name="hobby" value="dance"></label>
+    <script>
+        var inputs = document.getElementsByName('hobby');
+        inputs[1].checked = true;
+    </script> -->
+
+
+    <!-- 根据类名获取元素 getElementsByClassName()方法 -->
+    <!-- <div class="box">盒子1</div>
+    <div class="box">盒子2</div>
+    <script>
+        var boxs = document.getElementsByClassName('box');
+        console.log(boxs); //返回一个伪数组
+        console.log(boxs[0]);
+    </script> -->
+
+    <!-- querySelector() 和querySelectorAll() -->
+
+    <!-- <div class="box">盒子1</div>
+    <div class="box">盒子2</div>
+    <div id="nav">
+        <ul>
+            <li>首页</li>
+            <li>产品</li>
+        </ul>
+    </div>
+
+    <script>
+        var box = document.querySelector('div'); //获取该类元素的第一个元素
+        console.log(box);
+        var box2 = document.querySelector('#nav') //id名前必须加#
+        console.log(box2);
+        var boxs = document.querySelectorAll('.box') //类名前必须加.  返回该类元素的集合
+        console.log(boxs);
+        box2.style.width = '200px';
+        box2.style.height = '60px';
+        box2.style.background = 'red';
+    </script> -->
+
+    <!-- 获取特殊元素  利用document对象的属性 -->
+    <img src="./images/flower.png" alt="" srcset="">
+    <img src="./images/grass.png" alt="" srcset="">
+    <form action=""></form>
+    <form action=""></form>
+    <script>
+        // console.log(document.body);   ////获取文档的body元素
+        console.log(document.documentElement); //获取文档的html元素
+        console.log(document.title);
+        console.log(document.images); //返回文档中所有图片的集合
+        console.log(document.forms); //返回文档中所有表单的集合
+    </script>
+
+
+
+
+</body>
+
+</html>

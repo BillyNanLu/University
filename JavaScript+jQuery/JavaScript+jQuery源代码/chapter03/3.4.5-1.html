@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      var arr = ['red', 'green', 'blue', 'pink', 'purple'];
+      var newArr = [];
+      for (var i = arr.length - 1; i >= 0; i--) {
+        newArr[newArr.length] = arr[i];
+      }
+      // 输出结果：(5) ["purple", "pink", "blue", "green", "red"]
+      console.log(newArr);
+    </script>
+  </body>
+</html>
