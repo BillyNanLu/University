@@ -1,0 +1,43 @@
+@charset "UTF-8";
+/* CSS Document */
+*{margin: 0;padding: 0;}
+body{
+	background: url("../images/timg.jpg") no-repeat top center;
+	color: white;
+	}
+form{
+	width: 420px;
+	height: 200px;
+	border-radius: 20px;
+	border: 1px solid rgba(255,255,255,0.1);
+	margin: 250px auto;
+	background: rgba(255,255,255,0.1);
+	padding-top: 60px;
+	}
+p{
+	margin-top: 15px;
+	text-align: center;
+ }
+.user,.pass{
+	width: 165px;
+	height: 18px;
+	border: 1px solid rgba(255,255,255,0.1);
+	padding: 2px 2px 2px 22px;
+	border-radius: 4px;
+	color: #FFF;
+}
+.user{
+	background: url("../images/3.png") no-repeat 5px rgba(255,255,255,0.1);
+	}
+.pass{
+	background: url("../images/4.png") no-repeat 5px rgba(255,255,255,0.1);
+	}
+.butt{
+	width: 190px;
+	height: 25px;
+	border-radius: 3px;
+	border: 2px none;
+	margin-left: 52px;
+	background: #57b2c9;
+	color: #FFF;
+	}

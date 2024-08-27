@@ -1,0 +1,101 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>在线报名</title>
+	<style>
+		*body,h2,form,table{margin: 0; padding: 0}
+		body{font-size: 12px;}
+		#box{
+			width: 660px;
+			height: 600px;
+			border: 1px solid;
+			padding: 20px;
+			margin: 50px auto 0;
+		}
+		.header{
+			font-size: 22px;
+			padding-bottom: 30px;
+		}
+		.header span{
+			font-size: 12px;
+		}
+		td{padding-bottom: 24px;}
+		td.left{
+			width: 78px;
+			text-align: right;
+			padding-right: 8px;
+		}
+		.red{color: red;}
+		.text01, .text02{
+			width: 260px;
+			height: 12px;
+			border: 1px solid;
+			padding: 3px 3px 3px 26px;
+			font-size: 12px;
+		}
+		.text03{
+			width: 120px;
+			height: 12px;
+			border: 1px solid;
+			padding: 3px 3px 3px 26px;
+			font-size: 12px;
+		}
+		.message{
+			width: 430px;
+			height: 162px;
+			font-size: 12px;
+			padding: 3px;
+		}
+	</style>
+</head>
+
+<body>
+	<div id="box">
+		<h2 class="header">下面就开始在线报名吧<span>（以下信息是报名的重要依据，请认真填写）</span></h2>
+		<form action="#" method="post">
+			<table class="content">
+				<tr>
+					<td class="left">姓名<span class="red">*</span></td>
+					<td><input type="text" value="报名的重要依据，请认真填写" class="text01"></td>
+				</tr>
+				<tr>
+					<td class="left">手机<span class="red">*</span></td>
+					<td><input type="text" value="报名的重要依据，请认真填写" class="text02"></td>
+				</tr>
+				<tr>
+					<td class="left">性别<span class="red">*</span></td>
+					<td><input type="radio" name="sex" value="man">男 <input type="radio" name="sex" value="woman">女</td>
+				</tr>
+				<tr>
+					<td class="left">邮箱<span class="red">*</span></td>
+                	<td><input type="text" class="text03"/></td>
+				</tr>
+				<tr>
+            	<td class="left">意向课程<span class="red">*</span></td>
+                <td>
+                	<select class="course">
+                    	<option>网页设计</option>
+                    	<option selected="selected">平面设计</option>
+                        <option>3D设计</option>
+                    </select>
+                </td>
+           		</tr>
+				<tr>
+					<td class="left">了解传智渠道</td>
+					<td>
+						<input type="checkbox" />baidu <input type="checkbox" />论坛 <input type="checkbox" />朋友推荐 <input type="checkbox" />CSDN网站 <input type="checkbox" />视频教程 <input type="checkbox" />其他
+					</td>
+				</tr>
+				<tr>
+					<td class="left">留言</td>
+					<td><textarea cols="50" rows="5" class="message">请简述您有没有设计基础，以及为什么选择学习网页平面UI设计。</textarea></td>
+				</tr>
+				<tr>
+					<td><input type="submit" value="提交"/></td>
+				</tr>
+			</table>
+		</form>
+	</div>
+</body>
+</html>

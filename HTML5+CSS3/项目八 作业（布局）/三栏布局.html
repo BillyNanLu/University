@@ -1,0 +1,53 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>三栏布局</title>
+	<style>
+		body{margin: 0; padding: 0;text-align: center;}
+		div{
+			width: 980px;
+			margin: 5px auto;
+			background: #DDD;
+			}
+		#top{height: 40px;}
+		#nav{height: 60px;}
+		#banner{height: 200px;}
+		#content{height: 200px;}
+		.content_left{
+			width: 200px;
+			height: 200px;
+			background-color: #CCC;
+    		float: left; 
+			margin: 0;
+			}
+		.content_middle{
+			width: 570px;
+			height: 200px;
+			background-color:#CCC;
+			float:left;
+			margin:0 0 0 5px;
+			}
+		.content_right{
+			width: 200px;
+			height: 200px;
+			background-color:#CCC;
+			float: right;
+			margin: 0;
+			}
+		#footer{height: 90px;}
+	</style>
+</head>
+
+<body>
+	<div id="top">头部</div>
+	<div id="nav">导航栏</div>
+	<div id="banner">焦点图</div>
+	<div id="content">
+		<div class="content_left">内容左部分</div>
+		<div class="content_middle">内容中间部分</div>
+		<div class="content_right">内容右部分</div>
+	</div>
+	<div id="footer">页面底部</div>
+</body>
+</html>
