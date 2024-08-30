@@ -1,0 +1,22 @@
+package rb211;
+
+import java.lang.*;
+import java.io.*;
+import java.awt.*;
+import javax.swing.*;
+
+public class CapacityCalc extends JFrame {
+	// 1. 定义全局变量 全局对象
+	
+	
+	// 2. 书写构造方法初始化对象变量
+	public CapacityCalc() {
+		
+	}
+	
+	
+	// 3. 书写整个程序的入口 新建对象并调用相关的方法
+	public static void main(String [] args) {
+		
+	}
+}
