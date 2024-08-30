@@ -1,0 +1,137 @@
+body {
+    line-height: 1.5;
+    font-size: 16px;
+    font-family: "微软雅黑";
+    color: #353535;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    box-sizing: border-box;
+
+}
+
+
+/* header 开始 */
+.header {
+    width: 70%;
+    margin: 20px auto;
+    display: flex;
+    justify-content: space-between;
+    background-color: #e8eb6a;
+}
+
+.logo, .search {
+    width: 100px;
+    height: 100px;
+    background-color: #add8e6;
+}
+/* header 结束 */
+
+
+
+/* nav 开始 */
+.nav ul {
+    width: 70%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    background-color: #dd9a9b;
+}
+/* nav 结束 */
+
+
+
+/* mainbody 开始 */
+.mainbody {
+    width: 70%;
+    margin: 20px auto;
+    display: flex;
+    justify-content: space-between;
+    background-color: #e8eb6a;
+}
+
+.main {
+    flex-basis: auto;
+    flex-grow: 1;
+}
+
+.leftbar, .rightbar {
+    width: 200px;
+    height: 500px;
+    background-color: #15a4bd;
+}
+
+.main div {
+    height: 200px;
+    margin: 10px 0;
+    background-color: #d8bfd8;
+}
+/* mainbody 结束 */
+
+
+
+/* footer 开始 */
+.footer {
+    width: 70%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    overflow: hidden;
+    background-color: #e8eb6a;
+}
+
+.footer div {
+    width: 15%;
+    background-color: #57df62;
+}
+/* footer 结束 */
+
+
+
+/* 浏览器分辨率设置 */
+.menu {
+    display: none;
+}
+
+@media screen and (max-width: 900px) {
+    .rightbar{
+        display: none;
+    }
+}
+
+
+@media screen and (max-width: 480px) {
+    .leftbar {
+        display: none;
+    }
+
+    .nav ul li {
+        margin: 0px 10px;
+    }
+
+    .nav ul {
+        overflow: hidden;
+    }
+
+    .header {
+        position: relative;
+    }
+
+    .menu {
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        display: block;
+        width: 40px;
+        height: 40px;
+        border-radius: 5px;
+        background-color: #32e90e;
+        font-size: 30px;
+        line-height: 30px;
+        text-align: center;
+        color: #ffffff;
+    }
+}

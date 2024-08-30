@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="box">
+        <ul>
+            <li>hello, world</li>
+            <li>hello, world</li>
+            <li>hello, world</li>
+            <li>hello, world</li>
+            <li>hello, world</li>
+            <li>hello, world</li>
+            <li>hello, world</li>
+            <li>hello, world</li>
+            <li>hello, world</li>
+            <li><a href="#">hello, world</a></li>
+        </ul>
+        <p id="myp">test</p>
+        <p>test</p>
+        <p>test</p>
+        <p>test</p>
+        <p>test</p>
+        <p>test</p>
+        <p>test</p>
+        <p>test</p>
+        <p>test</p>
+        <p>test</p>
+    </div>
+
+    <input type="text" id="name">
+
+    <button>aaa</button>
+    <button>bbb</button>
+    <button>ccc</button>
+    <button>ddd</button>
+    <button>eee</button>
+
+</body>
+
+<script src="./js/jquery-3.3.1.min.js"></script>
+<script>
+    // 选择器
+    // $(".box").css("background", "#ccddff")
+    // $("#myp").css("background", "#554411")
+
+    // $("li:even").css("background", "#66ff99")
+
+    // $("p:not('#myp')").css("background", "#ff0099")
+
+    // $("li:last").css("background", "#00ff33")
+
+    // $("li:has(a)").css("background", "#663366")
+
+    // $("ul ~ p").css("background", "#cc33cc")
+
+    // $("li:gt(3)").css("background", "#ccff99")
+
+    // $("li:nth-child(2n+1)").css("background", "#cc3300")
+
+    // $("p[id][id^='my']").css("background", "#ff9966")
+
+
+
+    // 筛选器
+    // $("#myp").next().css("background", "#00ff33")
+
+    // $("#myp").nextAll().css("background", "#ccff99")
+
+    // $("#myp").prev().css("background", "#cc3300")
+
+    // $("a").parent().css("background", "#ff0099")
+
+    // $("#myp").siblings().css("background", "#ff9966")
+
+
+
+    // 文档处理
+    // $("ul").append("<li>new hello, world</li>")
+
+    // $("li:first").remove()
+
+    // $("ul").empty()
+
+    // $("li:first").html("changed")
+
+
+
+    // 事件
+    // 单击
+    $("button:first").click(function () {
+        $("li:last").html("last li changed")
+    })
+
+    $("button").eq(1).hover(
+        // 鼠标经过
+        function () {
+            $("p").css("background", "#ff9966")
+        },
+        // 鼠标划开
+        function () {
+            $("p").css("background", "#ffffff")
+        }
+    )
+
+    $("button").eq(2).click(function () {
+        $("ul").toggle()
+    })
+
+    // 获得焦点
+    $("#name").focus(function () {
+        $(this).css("background", "#33ff66")
+    })
+
+    // 失去焦点
+    $("#name").focusout(function () {
+        $(this).css("background", "#ffffff")
+    })
+
+
+
+    // 效果
+</script>
+
+</html>

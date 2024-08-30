@@ -1,0 +1,48 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+	background: #ECECEC;
+	font-family: '微软雅黑';
+	font-size: 16px;
+	line-height: 1.5;
+}
+
+.container {
+    width: 80%;
+    height: 200vh;
+    margin: 0 auto;
+    display: grid;
+    /* 列数 */
+    grid-template-columns: repeat(3, 1fr);
+    /* 行数 */
+    grid-template-rows: 1fr 1fr 10fr 2fr;
+    /* 间距 */
+    gap: 15px;
+}
+
+.item {
+    border: 1px solid #ffb6c1;
+    box-sizing: border-box;
+    background: #9932cc;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+}
+
+/* 合并 */
+.one {
+    grid-column: span 2;
+}
+
+.two {
+    grid-column: span 3;
+}
+
+.three {
+    grid-column: span 3;
+}

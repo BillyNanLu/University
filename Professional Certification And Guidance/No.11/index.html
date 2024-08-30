@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="js/vue.global.js"></script>
+</head>
+
+<style>
+    .boy {
+        background-color: #231e2e;
+        color: #ffffff;
+    }
+
+    .girl {
+        background-color: #ffb6c1;
+        color: #ffffff;
+    }
+</style>
+
+<body>
+    <div id="myapp">
+        name: <input type="text" v-model="name" v-bind:class="namestyle"><br />
+
+        age: <input type="text" v-model="age"><br />
+
+        sex: <input type="radio" name="sex" v-model="sex" value="male">male
+        <input type="radio" name="sex" v-model="sex" value="female"> female<br />
+
+        address: <input type="text" v-model="address"><br />
+
+        interests: <input type="checkbox" v-model="interests" value="film">film
+        <input type="checkbox" v-model="interests" value="food">food
+        <input type="checkbox" v-model="interests" value="travel">travel
+        <input type="checkbox" v-model="interests" value="online game">online game
+        <input type="checkbox" v-model="interests" value="reading">reading <br />
+
+        from: <select>
+            <option value="" value="Shanghai">Shanghai</option>
+            <option value="" value="Beijing">Beijing</option>
+            <option value="" value="Tianjing">Tianjing</option>
+            <option value="" value="Chongqing">Chongqing</option>
+            <option value="" value="Hongkong">Hongkong</option>
+        </select><br />
+
+        introduce:
+        <textarea></textarea><br />
+
+        {{getInfo()}} <br />
+        {{friendInfo}} <br />
+        {{name}} <br />
+        {{getYourName}} <br />
+
+        <input type="text" v-model="Kilometers">Kilometers ======== <input type="text" v-model="meters">meters<br />
+
+        简易计算器
+        <input type="text" v-model="shu1">
+        <input type="radio" v-model="opt" value="+">+
+        <input type="radio" v-model="opt" value="-">-
+        <input type="radio" v-model="opt" value="*">*
+        <input type="radio" v-model="opt" value="/">/
+        <input type="text" v-model="shu2">
+        {{result}}
+
+    </div>
+
+</body>
+
+<script>
+    const app = {
+        data() {
+            return {
+                name: "Tracy TT",
+                age: 19,
+                sex: "female",
+                address: "***, Kowloon, Hong Kong",
+                interests: [],
+                from: "",
+                introduce: "",
+
+                Kilometers: "",
+                meters: "",
+
+                shu1: "",
+                shu2: "",
+                opt: "",
+                result: "",
+
+                namestyle: {
+                    boy: true,
+                    girl: false
+                }
+
+            }
+        },
+
+        methods: {
+            getInfo() {
+                let a = `
+                    Your info is as follows, please confrim: 
+                    name: ${this.name}
+                    age: ${this.age}
+                    sex: ${this.sex}
+                    address: ${this.address}
+                    interests: ${this.interests}
+                    from: ${this.from}
+                    introduce: ${this.introduce}
+                `
+                return a
+            },
+
+            calculate() {
+                if (this.opt == "+")
+                    this.result = parseFloat(this.shu1) + parseFloat(this.shu2)
+                else if (this.opt == "-")
+                    this.result = parseFloat(this.shu1) - parseFloat(this.shu2)
+                else if (this.opt == "*")
+                    this.result = parseFloat(this.shu1) * parseFloat(this.shu2)
+                else if (this.opt == "/")
+                    this.result = parseFloat(this.shu1) / parseFloat(this.shu2)
+            }
+
+        },
+
+        computed: {
+            friendInfo() {
+                if (this.age >= 18)
+                    return "You are an adult, please attention your behavior"
+                else
+                    return "You are a nonage, please attention the time of surfering online"
+            },
+
+            getYourName() {
+                let newname = this.name
+                if (this.name.length > 20)
+                    newname = this.name.substr(0, 20)
+                newname = newname.toUpperCase()
+                return newname
+            }
+
+        },
+
+        watch: {
+            Kilometers(value) {
+                this.meters = parseFloat(value) * 1000
+            },
+            meters(value) {
+                this.Kilometers = parseFloat(value) / 1000
+            },
+
+            shu1: 'calculate',
+            shu2: 'calculate',
+            opt: 'calculate',
+
+            sex(val) {
+                if (val == "male") {
+                    this.namestyle.boy = true
+                    this.namestyle.girl = false
+
+                }
+                else {
+                    this.namestyle.boy = false
+                    this.namestyle.girl = true
+                }
+            }
+
+        }
+
+    }
+
+    let a = Vue.createApp(app)
+    let vm = a.mount("#myapp")
+
+</script>
+
+</html>

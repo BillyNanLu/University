@@ -1,0 +1,17 @@
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+@media screen and (max-width: 300px){
+    ul {column-count: 1}
+}
+
+@media screen and  (min-width:700px) and (max-width: 1000px) {
+    ul {column-count: 2}
+}
+
+@media screen and (min-width: 1000px) {
+    ul {column-count: 4}
+}

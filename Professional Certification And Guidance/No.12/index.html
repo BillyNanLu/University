@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/index.css">
+</head>
+
+<body>
+    <div id="caculator">
+        <h1>我的计算器</h1>
+        <div class="result">{{result}}</div>
+        <ul>
+            <li><button @click="btnclk('7')">7</button></li>
+            <li><button @click="btnclk('8')">8</button></li>
+            <li><button @click="btnclk('9')">9</button></li>
+            <li><button @click="btnclk('*')">*</button></li>
+            <li><button @click="btnclk('4')">4</button></li>
+            <li><button @click="btnclk('5')">5</button></li>
+            <li><button @click="btnclk('6')">6</button></li>
+            <li><button @click="btnclk('-')">-</button></li>
+            <li><button @click="btnclk('1')">1</button></li>
+            <li><button @click="btnclk('2')">2</button></li>
+            <li><button @click="btnclk('3')">3</button></li>
+            <li><button @click="btnclk('+')">+</button></li>
+            <li><button @click="btnclk('0')">0</button></li>
+            <li><button @click="btnclk('.')">.</button></li>
+            <li><button @click="btnclk('/')">/</button></li>
+            <li><button @click="jisuan">=</button></li>
+        </ul>
+        
+    </div>
+</body>
+
+<script src="js/vue.global.js"></script>
+
+<script>
+    const app = {
+        data() {
+            return {
+                shu1: "",
+                shu2: "",
+                opt: "",
+                result: ""
+            }
+        },
+
+        methods: {
+            btnclk(e) {
+                // console.log(e)
+                // 数1的确定条件：opt为空，按键不能是操作符
+                if (this.opt == "" && e != "+" && e != "-" && e != "*" && e != "/")
+                    this.shu1 = this.shu1 + e
+                
+                // opt的条件：数1已经确定，按键是操作符
+                if (this.shu1 != "" && this.shu2 == "" && (e == "+" || e == "-" || e == "*" || e == "/"))
+                    this.opt = e
+
+                // 数2的确定条件：opt已经确定，按键不能是操作符
+                if (this.opt != "" && e != "+" && e != "-" && e != "*" && e != "/")
+                    this.shu2 = this.shu2 + e
+
+                this.result = this.shu1 + this.opt + this.shu2
+            },
+
+            jisuan() {
+                this.shu1 = parseFloat(this.shu1)
+                this.shu2 = parseFloat(this.shu2)
+                if (this.opt == "+")
+                    this.result = this.shu1 + this.shu2
+                if (this.opt == "-")
+                    this.result = this.shu1 - this.shu2
+                if (this.opt == "*")
+                    this.result = this.shu1 * this.shu2
+                if (this.opt == "/")
+                    this.result = this.shu1 / this.shu2
+                this.shu1 = ""
+                this.opt = ""
+                this.shu2 = ""
+
+            }
+
+        }
+
+    }
+
+    let a = Vue.createApp(app)
+    let vm = a.mount("#caculator")
+
+</script>
+
+</html>

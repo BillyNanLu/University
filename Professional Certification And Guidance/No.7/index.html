@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+    <script>
+        var a = 3
+        const h = "hello"
+        if (a < 4) {
+            let b = 4
+            var c = 5
+            /* h = 6  // 报错 常量不能修改
+            console.log(h) */
+        }
+        // console.log(b)
+
+        // let m = 3, n = 4, r = 5
+        let [m, n, r] = [3, 4, 5]
+        console.log(m, n, r)
+
+        /* let stu = {
+            name: "jiajia",
+            age: 18,
+            sex: "female",
+            chinese: 98,
+            math: 89,
+            english: 78,
+            canDrive: function() {
+                if (this.age >= 18)
+                    return true
+                else
+                    return false
+            },
+            getTotalScore: function () {
+                return this.math + this.english + this.chinese
+            }
+        }
+        console.log(stu.getTotalScore())
+        console.log(stu.name + "candrive?" + stu.canDrive()) */
+
+
+        class Student {
+            constructor(name, age, sex, chinese, math, english) {
+                this.name = name
+                this.age = age
+                this.sex = sex
+                this.chinese = chinese
+                this.math = math
+                this.english = english
+            }
+
+            canDrive() {
+                if (this.age >= 18)
+                    return true
+                else
+                    return false
+            }
+            getTotalScore() {
+                return this.math + this.english + this.chinese
+            }
+        }
+
+        class Pupil extends Student {
+            constructor(caregiver, name, age, sex, chinese, math, english) {
+                this.caregiver = caregiver
+                super(name, age, sex, chinese, math, english)
+            }
+            getCareGiver() {
+                return this.caregiver
+            }
+        }
+
+        class CollegeStudent extends Student {
+            constructor(counsellor, name, age, sex, chinese, math, english) {
+                this.counsellor = counsellor
+                super(name, age, sex, chinese, math, english)
+            }
+            getCounsellor() {
+                return this.counsellor
+            }
+        }
+
+        /* let jiajia = new Student("jiajia", 18, "female", 89, 79, 69)
+        let xming = new Student("xming", 19, "male", 34, 72, 54) */
+
+        /* let sayHello = function() {
+            console.log("hello")
+        } */
+        
+        /* let sayHello = (a, b) => {   // 箭头函数
+            var cc = "hello"
+            console.log(a + b)
+        }
+        sayHello(3, 6)
+        console.log(cc) */
+
+
+        /* var add = {counter: 0, inc:function(){this.counter++}}
+        add.inc();
+        console.log(add.counter);
+        add.inc();
+        console.log(add.counter);
+        add.inc();
+        console.log(add.counter); */
+
+        var add = (function () {
+            var counter = 0
+            return function(){console.log(counter++)}
+        })()
+
+        add()
+        add()
+        add()
+        
+
+    </script>
+
+</body>
+
+</html>

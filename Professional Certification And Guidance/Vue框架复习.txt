@@ -1,0 +1,23 @@
+let b = 3
+const
+let a = `hello ${b}`
+function add(a, ...data)
+
+caculate("+", 2, 3, 34, 43, 43, 42)
+
+v-if
+v-else-if
+v-else
+
+v-for = "x in boxs"
+v-bind:click	@click
+v-model	绑定表单
+v-bind: calss="{ }"
+
+v-bind:style="{ }"
+computed:{
+}
+methods:{
+}
+watch:{
+}

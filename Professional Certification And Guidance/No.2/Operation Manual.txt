@@ -1,0 +1,39 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>无标题文档</title>
+	<link rel="stylesheet" href="css/style2.css" type="text/css">
+</head>
+
+<body>
+	
+	任务1：一个div盒子，阴影带圆角
+	
+	任务2：一个段落，文字有阴影
+	
+	任务3：一个div 宽100% ，从上到下 有渐变色
+	
+	
+	任务4：从网上下载某一字体文件，一个段落，应用所下载的字体
+	
+	任务5：2D变换，一个div盒子 ，右移30px,并旋转30度。
+	
+	
+	任务6：定义一个过渡效果，鼠标滑过时，背景变色
+	
+	任务7：使用css3动画特性设计一个动画，内容不限
+	
+	任务8: 段落文本二分栏
+	
+	任务9：请设计一组按钮，风格不限
+	
+	任务10：盒子大小使用box-sizing定义大小
+	
+	任务11：单独一个网页：定义一个列表ul，内有三个8个li，利用媒介查询实现以下效果：浏览器窗口宽度小于300像素时，呈1列显示，700-1000：呈2列显示；大于1000时，呈4列显示
+	
+	任务12： 单独一个网页：flex 弹性布局看这个：https://www.cnblogs.com/nyw1983/p/12454819.html ，写一段代码样例，展示如何水平 中间对齐，垂直底部对齐
+	
+	任务13：单独一个网页：grid 布局技术看这个：https://www.jianshu.com/p/3762f214cd6f，写一段代码，完成https://www.runoob.com/html/html-tutorial.html这个页面的最外层的结构布局。
+</body>
+</html>

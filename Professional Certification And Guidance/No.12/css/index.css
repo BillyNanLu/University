@@ -1,0 +1,48 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+ul {
+    list-style: none;
+}
+
+#caculator {
+    width: 400px;
+    background-color: #f3a6b2;
+    margin: 100px auto;
+    padding: 15px;
+    border: 2px #d84f66 solid;
+    border-radius: 10px;
+}
+
+#caculator h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #ffffff;
+}
+
+#caculator .result {
+    background-color: #ffffff;
+    height: 40px;
+    line-height: 40px;
+    text-align: right;
+    margin-bottom: 10px;
+}
+
+#caculator ul {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#caculator ul li {
+    width: 25%;
+}
+
+#caculator ul button {
+    width: 100%;
+    height: 80px;
+    font-size: 20px;
+    font-weight: bold;
+}

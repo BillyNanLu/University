@@ -1,0 +1,24 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.rd {
+    width: 100px;
+    height: 100px;
+    background: #ff82ab;
+    border: 1px solid #eee8aa;
+}
+
+.rd1 {
+    display: flex;
+    justify-content: center;
+    margin: 50px auto;
+}
+
+.rd2 {
+    height: 800px;
+    display: flex;
+    flex-direction:column;
+    border: 1px solid #000;
+}

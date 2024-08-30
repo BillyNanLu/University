@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <ul>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+    </ul>
+</body>
+
+<script>
+    const PI = 3.14 // 产量
+    // PI = 1.23  产量是不能被修改的
+
+
+    if (3 == 3) {
+        let a = 3   // let 支持块作用域
+        console.log(a)
+    }
+    {
+        let b = 3
+    }
+
+
+    // 模板字面量 ``     支持多行、支持变量占位符
+    let hello = "hello, everyone"
+    let a = `<ul>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+            </ul>
+            ${PI}
+            ${hello}
+        `
+    console.log(a)
+
+
+    function add1(a = 0, b = 0, ...c) {
+        let sum = 0
+        for (let i = 0; i < c.length; i++) {
+            sum = sum + c[i]
+        }
+        console.log("前两个数的和是", a + b);
+        return sum
+    }
+    console.log(add1(3, 43, 2, 3, 4, 5, 5))
+
+
+    let { title, isbn, price } = { title: "bookname", isbn: "89898988", "price": 90 }
+    console.log(title, isbn, price)
+
+
+    let add2 = (a, b) => {
+        return a + b
+    }
+    console.log(add2(3, 5))
+
+</script>
+
+</html>

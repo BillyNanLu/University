@@ -1,0 +1,47 @@
+function ppp() {
+        let promise = new Promise((resolve, reject) => {
+            setTimeout(() => {
+                try {
+                    let c = 25 / 3
+                    resolve(c)
+                    console.log("sucessful")
+                }
+                catch (ex) {
+                    reject(ex)
+                    console.log("failure")
+                }
+            }, 1000)
+
+        })
+        return promise
+    }
+
+    /* promise.then(
+        function (value) {
+            console.log(value)
+            return 66
+        },
+        function (value) {
+            console.log("数据出错了")
+            return 99
+        }
+    ).then(
+        function (value) {
+            console.log(value)
+        },
+        function (value) {
+            console.log(value)
+        }
+    ) */
+
+
+    async function yyy() {
+        await ppp()
+        console.log("111")
+        await ppp()
+        console.log("222")
+        await ppp()
+        console.log("333")
+
+    }
+    yyy()

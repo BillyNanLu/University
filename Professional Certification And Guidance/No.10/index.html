@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="js/vue.global.js"></script>
+
+    <style>
+        .touxiang {
+            width: 50px;
+            height: 50px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="myapp">
+        {{name.toUpperCase()}}, {{age>=18?"成年":"未成年"}}, {{sex}}
+        <div v-if="logined">{{name}}</div>
+        <div v-else>请登录     注册</div>
+        <div v-if="age<18">请不要迷恋游戏</div>
+        <div class="touxiang"><img  class="touxiang" :src="imgsrc" alt=""></div>
+        <div v-if="totalscore>=450">优秀</div>
+        <div v-else-if="totalscore>=400">良好</div>
+        <div v-else-if="totalscore>=350">中等</div>
+        <div v-else-if="totalscore>=300">及格</div>
+        <div v-else="totalscore">不及格</div>
+        <p>你的各科成绩如下</p>
+        <ul>
+            <li v-for="every in everyscore">{{every.ming}}             {{every.chengji}}</li>
+        </ul>
+        姓名：<input type="text" v-model="name">
+        <br>
+        性别：<input type="radio" value="male" v-model="sex"> 男 
+              <input type="radio" value="famale" v-model="sex"> 女
+        <br>
+        sex的值为：{{sex}}
+        <br>
+        <button @mouseover="changeSex()">按钮</button>
+    </div>
+
+</body>
+
+<script>
+    const app = {
+        data() {
+            return {
+                name: "Billy",
+                age: 19,
+                sex: "male",
+                logined: false,
+                imgsrc:"img/photo2.jpeg",
+                totalscore:490,
+                everyscore:[
+                    {ming:"PHP", chengji:98}, 
+                    {ming:"MySQL", chengji:98}, 
+                    {ming:"C++", chengji:98}, 
+                    {ming:"Java", chengji:98}, 
+                    {ming:"JavaScript", chengji:98}
+                ]
+
+            }
+        },
+        methods:{
+            loodpic(){
+                if(this.sex=="male") aaa="img/photo2.jpeg"
+                else aaa="img/photo1.jpeg"
+                return aaa
+            },
+            changeSex(){
+                if(this.imgsrc=="img/photo2.jpeg") this.imgsrc="img/photo1.jpeg"
+                else this.imgsrc="img/photo2.jpeg"
+            }
+        }
+
+    }
+
+    let myapp = Vue.createApp(app)
+    let vm = myapp.mount("#myapp")
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    // 模拟Ajax获取数据
+    /* function ppp() {
+        let promise = new Promise((resolve, reject) => {
+            setTimeout(() => {
+                try {
+                    let c = 25 / 3
+                    resolve(c)
+                    console.log("sucessful")
+                }
+                catch (ex) {
+                    reject(ex)
+                    console.log("failure")
+                }
+            }, 1000)
+
+        })
+        return promise
+    }
+
+    // promise.then(
+    //     function (value) {
+    //         console.log(value)
+    //         return 66
+    //     },
+    //     function (value) {
+    //         console.log("数据出错了")
+    //         return 99
+    //     }
+    // ).then(
+    //     function (value) {
+    //         console.log(value)
+    //     },
+    //     function (value) {
+    //         console.log(value)
+    //     }
+    // )
+
+
+    async function yyy() {
+        await ppp()
+        console.log("111")
+        await ppp()
+        console.log("222")
+        await ppp()
+        console.log("333")
+
+    }
+    yyy() */
+
+</script>
+
+</html>
