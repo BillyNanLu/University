@@ -1,0 +1,24 @@
+******启动xampp中的Apache***********
+如果启动不了：
+1.点击程序界面上的【config】按钮，在新窗口中点击【server and port setting】，在设置窗口上输入对应的对应的端口，需要记得通常情况下80窗口及443窗口可以一起修改。改为801  4430
+2.回到后，再次点击启动，还是出错。。。。会不会是没有被修改，只能看一下程序下的配置文件，点xampp后的config/httpd-ssl.conf，config/httpd.conf需要注意的是80端口及443端口需要分别设置。
+   打开配置文件后，直接使用搜索功能找到80端口的配置，将端口修改为801之类的，443端口同样，需要修改为其它端口，保存文件。
+3.配置好后，点击启动，可以正常了
+   打开浏览器，输入：http://localhost:801/  出现xampp就可以了，
+   后面php步骤“五”：url地址（http://localhost:801/）
+
+************在xampp目录下的htdocs文件夹下创建phpinfo文件夹，以后用于存放php项目
+
+******在zend studio中怎么设置php server**********
+打开 Zend Studio，单击窗口菜单，然后从下拉菜单中选择“Preferences”。在弹出的对话框中，选择“PHP”-> “Servers”  选“Generic PHP Server” 下一步
+名称：localhost
+Base URL:http://localhost:801
+Document Root：C:\xampp\htdocs\phpinfo
+
+************创建php项目*************
+file/new/local php project
+编写 index.php
+run/run as /PHP web application 自动打开浏览器，可以运行php，如果出错，则将地址栏修改如下：
+
+http://localhost:801/shafc/index.php--->修改http://localhost:801/phpinfo/shafc/index.php
+

@@ -1,0 +1,20 @@
+<?php 
+    $name="Billy";
+    $age=19;
+    $sex="male";
+    echo<<<AA
+                学生信息表
+        <table width="200" border="1" cellspacing="0" cellpadding="0">
+            <tr>
+                <td>name</td>
+                <td>age</td>
+                <td>sex</td>
+            </tr>
+            <tr>
+                <td>$name</td>
+                <td>$age</td>
+                <td>$sex</td>
+            </tr>
+        </table>
+AA;
+?>

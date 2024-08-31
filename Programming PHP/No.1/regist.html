@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>regist</title>
+</head>
+
+<body>
+    <p>用户注册：</p>
+
+    <form action="">
+        <p>用户名: <input type="text" name="name" id="name"></p>
+        <p>密码: <input type="password" name="password" id="password"></p>
+        <p>性别: 
+          <label><input type="radio" name="sex" value="男" id="sex_0" checked>男</label>
+          <label><input type="radio" name="sex" value="女" id="sex_1">女</label>
+        </p>
+        <p>年龄: <input type="text" name="age" id="age"></p>
+        <p>
+            民族: <select name="minzu" id="minzu">
+                    <option value="汉族">汉族</option>
+                    <option value="藏族">藏族</option>
+                    <option value="维吾尔族">维吾尔族</option>
+                    <option value="回族">回族</option>
+                    <option value="畜族">畜族</option>
+                    <option value="锡伯族">锡伯族</option>
+                </select>
+        </p>
+        <p>
+            爱好:
+            <label for="">
+                <input type="checkbox" name="hobby" value="篮球" id="hobby_0"> 篮球
+                <input type="checkbox" name="hobby" value="足球" id="hobby_1"> 足球
+                <input type="checkbox" name="hobby" value="围棋" id="hobby_2"> 围棋
+                <input type="checkbox" name="hobby" value="二胡" id="hobby_3"> 二胡
+            </label>
+        </p>
+        <p>备注: <textarea name="bz" id="bz" cols="30" rows="10"></textarea></p>
+        <p>
+            <input type="submit" name="submit" id="submit" value="提交">
+            <input type="reset" name="reset" id="reset" value="重置">   
+        </p>
+    </form>
+</body>
+
+</html>
