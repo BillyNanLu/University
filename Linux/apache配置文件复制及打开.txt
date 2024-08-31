@@ -1,0 +1,3 @@
+[root@rk8 ~]#rm -f .vimrc
+#cp    /etc/httpd/conf/httpd.conf  ~/
+#vim  ~/httpd.conf
